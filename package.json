@@ -1,5 +1,5 @@
 {
-  "name": "toxin-part",
+  "name": "toxin",
   "version": "1.0.0",
   "description": "Javascript, Webpack, jQuery, Pug, SCSS",
   "main": "index.js",
