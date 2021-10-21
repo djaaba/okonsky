@@ -1,5 +1,6 @@
 const path = require('path')
 const fs = require('fs')
+const webpack = require('webpack')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 //
@@ -25,6 +26,10 @@ module.exports = {
     plugins: [
         new HTMLWebpackPlugin({
             template: './src/pug/pages/headers-footers-index.pug'
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
         }),
         new CleanWebpackPlugin(),
         ...PAGES.map(page => new HTMLWebpackPlugin({

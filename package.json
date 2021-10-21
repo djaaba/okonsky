@@ -1,7 +1,7 @@
 {
-  "name": "webpack-test",
+  "name": "toxin-part",
   "version": "1.0.0",
-  "description": "javascript, js, webpack",
+  "description": "Javascript, Webpack, jQuery, Pug, SCSS",
   "main": "index.js",
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
@@ -25,6 +25,8 @@
   "author": "Veselov <ddanil82@bk.ru>",
   "license": "ISC",
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "jquery": "^3.6.0",
+    "normalize.css": "^8.0.1",
+    "slick-carousel": "^1.8.1"
   }
 }
