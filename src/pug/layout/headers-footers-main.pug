@@ -10,22 +10,25 @@ html(lang='en')
     block head
 
   body(class=pageClass)
-  .main__background
-    .wrapper
-      .main__logo
-        img(src="./src/assets/png/svg/toxin-logo.svg")
-      //- #app
-    ul.main__headers__footers
-      li.main__headers__footers__el
-        include ../includes/modules/headers-footers/unregistered-header
-      li.main__headers__footers__el
-        include ../includes/modules/headers-footers/registered-header
-      li.main__headers__footers__el
-        include ../includes/modules/headers-footers/footer
-      li.main__headers__footers__el
-        include ../includes/modules/headers-footers/footer-card
-    .content-wrapper
-      block content
-        
-        
+    .main__background
+      
+      //- .slider(data-slick='{"slidesToShow": 4, "slidesToScroll": 4}')
+      //-   div
+      //-     img(src="./src/assets/png/svg/toxin-logo.svg")
+      //-   div
+      //-     img(src="./src/assets/png/svg/toxin-logo.svg")
+      //-   div
+      //-     img(src="./src/assets/png/svg/toxin-logo.svg")
+      //-   div
+      //-     img(src="./src/assets/png/svg/toxin-logo.svg")
+      //-   div
+      //-     img(src="./src/assets/png/svg/toxin-logo.svg")
+      //-   div
+      //-     img(src="./src/assets/png/svg/toxin-logo.svg")
+        //- #app
+      ul.main__headers__footers
+        li.main__headers__footers__el
+          include ../includes/modules/headers-footers/footer-card
+      .content-wrapper
+        block content
     block script

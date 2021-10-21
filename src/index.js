@@ -1,20 +1,11 @@
 import '/src/styles/reset.css'
 import '/src/styles/scss/fonts.scss'
 
-
-
-
-
-
-
-
-
-
-
-
-import '/src/styles/scss/headers-footers/_unregistered-header.scss'
-import '/src/styles/scss/headers-footers/_registered-header.scss'
+import 'slick-carousel';
+$(".slider").slick();
 import '/src/styles/scss/headers-footers/_main.scss'
-import '/src/styles/scss/headers-footers/_footer.scss'
-import '/src/styles/scss/headers-footers/_arrow.scss'
-import '/src/styles/scss/headers-footers/_footer-card.scss'
+
+import "@fortawesome/fontawesome-free/js/solid.js";
+import "@fortawesome/fontawesome-free/js/regular.js";
+import "@fortawesome/fontawesome-free/js/fontawesome.min.js";
+

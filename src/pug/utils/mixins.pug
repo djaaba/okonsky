@@ -1,4 +1,16 @@
-mixin item(title, descr)
+mixin product(img, title, descr)
+  +item("priv", "priv", "priv")
+
+
+mixin item(img, title, descr)
   .item
     h2.item-title= title
     p.item-descr= descr
+
+mixin rating(count, date)
+  ul.review__customer-rate__stars
+    - for (var i = 0; i < count; i++)
+        li(class="fas fa-star")
+    - for (var i = 0; i < 5 - count; i++)
+        li(class="far fa-star")
+  p.review__customer-rate__date= date

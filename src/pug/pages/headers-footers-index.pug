@@ -5,19 +5,23 @@ block variables
   - var description = 'Description for Webpack + Pug';
   - var pageClass = 'index-page';
 
-//- block content
+block content
   section
-    .container
-      +item('item title', 'item descr')
-      +item('item title', 'item descr')
-      +item('item title', 'item descr')
-  example-component
+    .review__container
+      .review__header Оконский
+      hr.review__line(align="center" )
+      .review__main
+        img.review__customer-photo(src="/src/assets/png/avatar.jpg")
+        .review__customer-content
+          p.review__customer-name Резчикова Елена
+          .review__customer-rate
+            +rating(4, "15 марта")
+          p.review__customer-text Мастера предприятия «Оконский» выполняли в моей квартире остекление балкона под ключ. Работа предстояла серьезная. Вся работа у специалистов заняла всего три рабочих дня. Это с демонтажем старого остекления, наружной и внутренней отделкой. Мне очень понравилось. Молодцы!!! Так держать!!!
+          .review__balcony-photo
+            img.review__customer-photo(src="/src/assets/png/review-photo1.jpg")
+            img.review__customer-photo(src="/src/assets/png/review-photo2.jpg")
 
 
 block script
-  //- script(type='text/javascript').
-    const foo = true;
-    let bar = function() {};
-    if (foo) {
-    bar(1 + 5)
-    }
+  script(type='text/javascript').
+    console.log("su")

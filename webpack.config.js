@@ -20,7 +20,7 @@ module.exports = {
         main: './src/index.js',
     },
     output: {
-        filename: '[name].[contenthash].js', // name динамически указывает на main и assets
+        filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [
