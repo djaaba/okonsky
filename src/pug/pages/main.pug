@@ -1,0 +1,35 @@
+include ../layout/page
+include ../utils/mixins
+block variables
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{title}
+  body(class=pageClass)
+    .wrapper
+      //- include ../modules/reviews
+      h2 Конфигурации
+      section.configuration
+        include ../modules/configuration
+      h2 Наши преимущества
+      section.advantages
+        //- include ../modules/advantages
+        h3.advantages__more-header И это еще не всё:
+        ul.advantages__more-list  
+          li.advantages__more-elem
+            img(src = '/src/assets/png/svg/shield1.svg')
+            p.advantages__subtitle.advantages__subtitle_more-list-width Безопасная и качественная фурнитура прямиком из Германии
+          li.advantages__more-elem
+            img(src = '/src/assets/png/svg/eco.svg')
+            p.advantages__subtitle.advantages__subtitle_more-list-width Только экологически-чистые, нетоксичные, перерабатываемые материалы
+          li.advantages__more-elem
+            img(src = '/src/assets/png/svg/document.svg')
+            p.advantages__subtitle.advantages__subtitle_more-list-width Монтаж строго в соответствии с <span><a href='/src/assets/gost_30674-99.pdf'>ГОСТ 30674-1999</a></span>, <span><a href='/src/assets/gost_30971-02.pdf'>ГОСТ 30971-2002</a></span>
+          li.advantages__more-elem
+            img(src = '/src/assets/png/svg/colors.svg')
+            p.advantages__subtitle.advantages__subtitle_more-list-width Самые разнообразные цветовые решения, пластиковые окна с ламинацией под дерево
+    block script

@@ -25,7 +25,7 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
-            template: './src/pug/pages/headers-footers-index.pug'
+            template: './src/pug/pages/main.pug'
         }),
         new webpack.ProvidePlugin({
             $: 'jquery',
@@ -60,9 +60,13 @@ module.exports = {
                 use:['file-loader']
             },
             {
-                test: /\.(ttf|woff|woff2|eot|svg)$/,
+                test: /\.(ttf|woff|woff2|eot)$/,
                 use: ['file-loader']
-            }
+            },
+            {
+                test: /\.svg$/,
+                loader: 'svg-inline-loader'
+            },
         ]
     }
 }

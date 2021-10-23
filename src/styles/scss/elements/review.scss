@@ -1,13 +1,14 @@
-@import "./_footer.scss";
-
-.review__{
-    &container{
+.review{
+    &__container{
         background-color: white;
-        max-width: 370.67px;
-        min-height: 528px;
+        // max-width: 370.67px;
+        // min-height: 528px;
         border-radius: 12px;
     
-
+        margin-right: 24px;
+        &:last-child{
+            margin-right: 0;
+        }
         color: black;
 
         font-family: Montserrat-Regular;
@@ -16,7 +17,7 @@
         font-size: 14px;
         line-height: 21px;
     }
-    &header{
+    &__header{
         color: #21282E;
         padding: 20px 0 21.5px 30px;
 
@@ -26,29 +27,27 @@
         font-size: 20px;
         line-height: 29px;
     }
-    &line{
-        width: 100%;
-        background: rgba(217, 217, 217, 0.25);
-
-        border: 0px;
-        padding: 1px 0 1px 0;
-        margin: 0px 0px 22px;
+    &__line{
+        @extend %line;
     }
-    &main{
+    &__main{
         display: flex;
+
+        padding-top: 22px;
         padding-left: 22px;
         img{
             width: 48px;
             height: 48px;
         }
     }
-    &customer-photo{
+    &__customer-photo{
 
     }
-    &customer-content{
+    &__customer-content{
         padding-left: 20px;
+
     }
-    &customer-name{
+    &__customer-name{
         font-style: normal;
         font-weight: 600;
         font-size: 18px;
@@ -56,15 +55,19 @@
 
         padding-bottom: 10px;
     }
-    &customer-rate{
+    &__customer-rate{
         display: flex;
+        margin-bottom: 5px;
         .fa-star{
             color: rgba(254, 203, 47, 1);
             padding-right: 4px;
             font-size: 13px;
+            &:last-child{
+                padding-right: 0px;
+            }
         }
         &__stars{
-            margin: 0px 7px 8px 0px;
+            margin: 0px 12px 8px 0px;
         }
         &__date{
             color: rgba(0, 0, 0, 0.4);
@@ -74,20 +77,32 @@
             line-height: 19.6px;
         }
     }
-    &customer-text{
-        max-width: 252px;
-
+    &__customer-text{
+        // max-width: 252px;
+        width: 100%;
         color: rgba(0, 0, 0, 0.7);
+        margin-bottom: 14px;
     }
-    &balcony-photo{
+    &__customer-wrapper{
+        padding-right: 45px;
+    }
+    &__balcony-photo{
         height: 97px;
         display: flex;
+
+        width: 100%;
+        overflow: hidden;
+
+        margin-bottom: 30px;
         img{
             width: 100%;
             height: 100%;
+
+            margin-right: 8px;
+
+            &:last-child{
+                margin-right: 0px;
+            }
         }
     }
-}
-body{
-    background-color: gray;
 }

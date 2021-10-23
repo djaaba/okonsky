@@ -1,16 +1,47 @@
-mixin product(img, title, descr)
-  +item("priv", "priv", "priv")
-
-
-mixin item(img, title, descr)
-  .item
-    h2.item-title= title
-    p.item-descr= descr
-
-mixin rating(count, date)
+//- stars
+mixin rating(stars, date)
   ul.review__customer-rate__stars
-    - for (var i = 0; i < count; i++)
+    - for (var i = 0; i < stars; i++)
         li(class="fas fa-star")
-    - for (var i = 0; i < 5 - count; i++)
+    - for (var i = 0; i < 5 - stars; i++)
         li(class="far fa-star")
   p.review__customer-rate__date= date
+
+//- rewiev slider
+mixin review(customerName, customerPhoto, stars, date, customerText, workPhoto1, workPhoto2, workPhoto3)
+  .review__container
+    p.review__header Оконский
+    hr.review__line
+    .review__main
+      img.review__customer-photo(src=customerPhoto)
+      .review__customer-content
+        p.review__customer-name=customerName
+        .review__customer-rate
+          +rating(stars, date)
+        .review__customer-wrapper
+          p.review__customer-text=customerText
+          .review__balcony-photo
+            if(workPhoto1)
+              img(src=workPhoto1)
+            if(workPhoto2)
+              img(src=workPhoto2)
+            if(workPhoto3)
+              img(src=workPhoto3)
+
+//- configuration row
+mixin row(name, price)
+  li.configuration__item
+    .configuration__item__row
+        p.configuration__item__name=name
+        p.configuration__item__price=price
+    hr.configuration__item__line
+
+//- configuration item
+mixin item(src, name)
+  .configuration__container
+    img.configuration__photo(src=src)
+    .configuration__content
+        p.configuration__title=name
+        ul.configuration__list
+          if block 
+            block

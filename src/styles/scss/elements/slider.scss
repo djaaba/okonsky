@@ -1,0 +1,59 @@
+.slider{
+    min-width: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    .slick-arrow{
+        position: absolute;
+        z-index: 10;
+        
+        border: 0;
+        font-size: 0;
+
+        width: 50px;
+        height: 50px;
+    }
+    .slick-next{
+        right: 0;
+        bottom: 0;
+        background: url('/src/assets/png/next-arrow.jpg') 0 100% no-repeat;
+    }
+    .slick-prev{
+        left: 0;
+        bottom: 0;
+        background: url('/src/assets/png/prev-arrow.jpg') 0 100% no-repeat;
+    }
+    .slick-dots{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 72px;
+        button{
+            padding: 0;
+            border: 0;
+            margin: 0 16px;
+
+            font-size: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.2)
+        }
+    }
+    li.slick-active{
+        button{
+            background-color: $primary-color;
+        }
+    } 
+    
+    .slick-track{
+        display: flex;
+    }
+    .slick-list{
+        overflow: hidden;
+    }
+    .flex__column{
+        min-width: 0;
+    }
+}

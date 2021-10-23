@@ -1,0 +1,127 @@
+@media (min-width: 320px) and (max-width: 479px) {
+    .wrapper {
+        h2 {
+            font-size: 30px;
+        }
+
+        .review__ {
+            &__container {
+                max-width: 300px;
+            }
+        }
+
+        .configuration {
+            &__container {
+                width: 300px;
+            }
+        }
+
+        .advantages {
+            &__elem {
+                max-width: 300px;
+            }
+        }
+    }
+}
+
+@media (min-width: 480px) and (max-width: 639px) {
+    .wrapper {
+        .review__ {
+            &__container {
+                max-width: 460px;
+            }
+        }
+
+        .configuration {
+            &__container {
+                width: 460px;
+            }
+        }
+    }
+}
+
+@media (min-width: 640px) and (max-width: 959px) {
+    .wrapper {
+        .review__ {
+            &__container {
+                max-width: 298px;
+            }
+        }
+
+        .configuration {
+            &__container {
+                width: 298px;
+            }
+        }
+
+        .advantages {
+            &__more-list {
+                justify-content: center;
+            }
+            &__elem {
+                max-width: 600px;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 960px) and (max-width: 1199px) {
+    .wrapper {
+        .review {
+            &__container {
+                max-width: 458px;
+            }
+        }
+
+        .configuration {
+            &__container {
+                width: 458px;
+            }
+        }
+
+        .advantages {
+            &__more-list {
+                justify-content: center;
+            }
+
+            &__list {
+                display: flex;
+            }
+
+            &__elem {
+                max-width: 300px;
+            }
+        }
+    }
+
+
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+        .review {
+            &__container {
+                max-width: 370px;
+            }
+        }
+
+        .configuration {
+            justify-content: space-between;
+        }
+
+        .advantages {
+            &__more-list {
+                justify-content: center;
+            }
+
+            &__list {
+                display: flex;
+            }
+
+            &__elem {
+                max-width: 300px;
+            }
+        }
+    }
+}
