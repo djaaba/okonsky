@@ -1,0 +1,40 @@
+.quality-windows{
+    &__container{
+        display: flex;
+    }
+    &__content{
+        align-self: center;
+    }
+    &__title{
+        font-weight: 600;
+        font-size: 48px;
+
+        margin-bottom: 24px;
+    }
+    &__subtitle{
+        font-size: 22px;
+        line-height: 30px;
+        color: rgba(0, 0, 0, 0.7);
+
+        margin-bottom: 48px;
+    }
+    span{
+        color: $primary-color;
+        text-decoration: underline;
+    }
+    &__img{
+        width: 560px;
+        height: 509px;
+    }
+    &__button{
+        color: white;
+
+        padding: 16px 69px;
+
+        background: $primary-color;
+        box-shadow: 0px 2px 9px -1px rgba(203, 29, 29, 0.45);
+        border-radius: 75px;
+        border: 0px;
+
+    }
+}

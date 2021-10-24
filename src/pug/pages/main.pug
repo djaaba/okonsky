@@ -11,15 +11,19 @@ html(lang="en")
     title #{title}
   body(class=pageClass)
     .wrapper
+      section.quality-windows
+        //- include ../modules/quality-windows
+      section.profiles
+        include ../modules/profiles
       //- include ../modules/reviews
       h2 Конфигурации
       section.configuration
-        include ../modules/configuration
+        //- include ../modules/configuration
       h2 Наши преимущества
       section.advantages
         //- include ../modules/advantages
         h3.advantages__more-header И это еще не всё:
-        ul.advantages__more-list  
+        //- ul.advantages__more-list  
           li.advantages__more-elem
             img(src = '/src/assets/png/svg/shield1.svg')
             p.advantages__subtitle.advantages__subtitle_more-list-width Безопасная и качественная фурнитура прямиком из Германии

@@ -1,0 +1,184 @@
+.blank {
+    width: 128px;
+    height: 14px;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 7px;
+    margin: auto 0 auto 0;
+
+}
+
+.filled {
+    width: 75%;
+    height: 100%;
+    border-radius: 7px;
+}
+
+.filled-orange {
+    background: #F36819;
+}
+
+.filled-green {
+    background: #4AC120;
+}
+
+.filled-yellow {
+    background: #F3B619;
+}
+
+.profiles {
+    &__container {}
+
+    &__list {}
+
+    &__elem {
+        max-width: 460px;
+        background-color: gold;
+        border-radius: 12px;
+    }
+
+    &__wrapper {
+        display: flex;
+        // margin-bottom: 20px;
+        padding: 32px;
+
+
+
+
+
+
+
+    }
+
+    &__text {
+        max-width: 212px;
+
+        margin-right: 24px;
+    }
+
+    &__brand-block {
+        display: flex;
+        margin-bottom: 18px;
+    }
+
+    &__brand-img {
+        margin-right: 12px;
+        border-radius: 50%;
+    }
+
+    &__title {
+
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 30px;
+
+    }
+
+    &__subtitle {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        color: rgba(0, 0, 0, 0.7);
+    }
+
+    &__price {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        color: rgba(0, 0, 0, 0.4);
+
+        padding: 16px 0 8px;
+    }
+
+    &__price-field {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        color: $primary-color;
+        padding: 8px 16px 10px 16px;
+        border: 1px solid $primary-color;
+        border-radius: 12px;
+
+        max-width: 155px;
+    }
+
+    &__img {
+        width: 160px;
+        height: 170px;
+    }
+
+    &__indicators {
+        padding: 0 32px 0 32px;
+        display: flex;
+
+
+
+
+
+
+
+    }
+
+    &__indicator-list {
+        img {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+    }
+
+    &__indicator-elem {
+        display: flex;
+        margin-bottom: 12px;
+        justify-content: space-between;
+
+        &::before {
+            content: "\2022";
+            color: $primary-color;
+            font-weight: bold;
+            width: 4px;
+            margin-right: 10px;
+            /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        }
+
+        // list-style-type: square !important;
+        // list-style-position: inside;
+        // display:list-item;
+        // list-style-position:outside;
+
+    }
+
+    &__indicator-img {
+        width: 22px;
+        height: 22px;
+    }
+
+    &__subtitle_margin {
+        margin-right: 30px;
+        width: 190px;
+
+    }
+
+    &__indicator-img_margin {
+        margin-right: 11px;
+    }
+
+    &__button {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+        border-radius: 32px;
+        background: white;
+        padding: 14px 40px;
+
+        &:hover {
+            color: white;
+            background: $primary-color;
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        }
+    }
+}
