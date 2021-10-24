@@ -11,19 +11,27 @@ html(lang="en")
     title #{title}
   body(class=pageClass)
     .wrapper
+      nav.header__navigation
+        a.header__logo
+          img()
+        a.header__link Профили
+        a.header__link Конфигурации
+        a.header__link Бесплатный замер
+        a.header__link Контакты
+        a.header__link(href = 'tel: +78633081372') + 7 (863) 309-13-72
       section.quality-windows
-        //- include ../modules/quality-windows
+        include ../modules/quality-windows
       section.profiles
-        include ../modules/profiles
-      //- include ../modules/reviews
+        //- include ../modules/profiles
+      include ../modules/reviews
       h2 Конфигурации
       section.configuration
-        //- include ../modules/configuration
+        include ../modules/configuration
       h2 Наши преимущества
       section.advantages
-        //- include ../modules/advantages
+        include ../modules/advantages
         h3.advantages__more-header И это еще не всё:
-        //- ul.advantages__more-list  
+        ul.advantages__more-list  
           li.advantages__more-elem
             img(src = '/src/assets/png/svg/shield1.svg')
             p.advantages__subtitle.advantages__subtitle_more-list-width Безопасная и качественная фурнитура прямиком из Германии

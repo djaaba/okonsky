@@ -1,52 +1,28 @@
-.blank {
-    width: 128px;
-    height: 14px;
-    background: rgba(0, 0, 0, 0.08);
-    border-radius: 7px;
-    margin: auto 0 auto 0;
-
-}
-
-.filled {
-    width: 75%;
-    height: 100%;
-    border-radius: 7px;
-}
-
-.filled-orange {
-    background: #F36819;
-}
-
-.filled-green {
-    background: #4AC120;
-}
-
-.filled-yellow {
-    background: #F3B619;
-}
-
 .profiles {
-    &__container {}
-
-    &__list {}
-
+    &__container {
+    }
+    
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 12px;
+    }
+    
     &__elem {
         max-width: 460px;
-        background-color: gold;
         border-radius: 12px;
+        
+        // background-color: gold;
+
     }
-
-    &__wrapper {
+    &__wrapper{
+        max-width: 396px;
+        margin: 0 auto;
+    }
+    &__content{
         display: flex;
-        // margin-bottom: 20px;
-        padding: 32px;
-
-
-
-
-
-
-
+        padding: 32px 0;    
     }
 
     &__text {
@@ -61,8 +37,13 @@
     }
 
     &__brand-img {
-        margin-right: 12px;
+        width: 24px;
+        height: 24px;
         border-radius: 50%;
+
+        margin: auto 0;
+        margin-right: 12px;
+
     }
 
     &__title {
@@ -105,29 +86,18 @@
     }
 
     &__img {
-        width: 160px;
-        height: 170px;
-    }
-
-    &__indicators {
-        padding: 0 32px 0 32px;
-        display: flex;
-
-
-
-
-
-
-
+        max-width: 160px;
+        max-height: 170px;
     }
 
     &__indicator-list {
+        padding-bottom: 18px;
         img {
             margin-top: auto;
             margin-bottom: auto;
         }
     }
-
+    
     &__indicator-elem {
         display: flex;
         margin-bottom: 12px;
@@ -163,22 +133,52 @@
     &__indicator-img_margin {
         margin-right: 11px;
     }
-
-    &__button {
-        font-style: normal;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 24px;
-        color: $primary-color;
-        border: 1px solid $primary-color;
-        border-radius: 32px;
-        background: white;
-        padding: 14px 40px;
-
-        &:hover {
-            color: white;
-            background: $primary-color;
-            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    &__indicator-blank {
+        width: 128px;
+        height: 14px;
+        background: rgba(0, 0, 0, 0.08);
+        border-radius: 7px;
+        margin: auto 0 auto 0;
+    
+    }
+    
+    &__indicator-filled {
+        width: 75%;
+        height: 100%;
+        border-radius: 7px;
+        &_orange {
+            background: #F36819;
         }
+        &_green {
+            background: #4AC120;
+            width: 30%;
+        }
+        &_yellow {
+            background: #F3B619;
+            width: 100%;
+        }
+    }
+    &__button {
+        width: 100%;
+        text-align: right;
+        padding-bottom: 32px;
+        button{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 24px;
+            color: $primary-color;
+            border: 1px solid $primary-color;
+            border-radius: 32px;
+            background: white;
+            padding: 14px 40px;
+    
+            &:hover {
+                color: white;
+                background: $primary-color;
+                transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+            }
+        }
+        
     }
 }

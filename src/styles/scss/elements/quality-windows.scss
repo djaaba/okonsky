@@ -1,21 +1,26 @@
 .quality-windows{
+    max-width: 1160px;
+    margin: 0 auto;
     &__container{
         display: flex;
     }
     &__content{
         align-self: center;
+        max-width: 560px;
+
     }
     &__title{
         font-weight: 600;
         font-size: 48px;
 
         margin-bottom: 24px;
+
     }
     &__subtitle{
         font-size: 22px;
         line-height: 30px;
         color: rgba(0, 0, 0, 0.7);
-
+        max-width: 560px;
         margin-bottom: 48px;
     }
     span{
@@ -23,8 +28,12 @@
         text-decoration: underline;
     }
     &__img{
-        width: 560px;
-        height: 509px;
+        width: 100%;
+        height: 100%;
+        img{
+            width: 560px;
+            height: 509px;
+        }
     }
     &__button{
         color: white;

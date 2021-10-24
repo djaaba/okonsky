@@ -21,28 +21,102 @@
                 max-width: 300px;
             }
         }
-        .profiles{
-            .blank{
-                width: 46px;
-                height: 46px;
-                // background-color: green;
 
-                // position: absolute;
-                background-image: url(/src/assets/png/circle-bar.png);
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
+        .profiles {
+            &__wrapper {
+                max-width: 300px;
             }
-            &__indicator-img{
-                position: absolute;
 
-                bottom: 0;
-
+            &__button {
+                text-align: center;
             }
-            .filled{
-                display:none
+
+            &__img {
+                width: 30%;
+                height: 30%;
+                margin: auto 0;
+                // width: 50px;
+                // height: 50px;
+            }
+
+            &__price-field {
+                // width: 100%;
             }
         }
+
+        .quality-windows {
+            &__container {
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: flex-end;
+
+                text-align: center;
+
+            }
+
+            &__content {
+                align-self: center;
+
+                max-width: 278px;
+
+            }
+
+            &__img {
+                width: 259px;
+                margin: 0 auto 20px;
+            }
+
+            &__title {
+                font-size: 25px;
+                line-height: 1.2;
+
+
+            }
+
+            &__subtitle {
+                font-size: 15px;
+                line-height: 1.4;
+
+                margin-bottom: 20px;
+            }
+
+            &__button {
+                width: 259px;
+            }
+        }
+
+        // .profiles {
+        //     &__indicator-blank {
+        //         width: 46px;
+        //         height: 46px;
+        //         // background-color: green;
+        //         background: rgba(0, 0, 0, 0);
+        //         // position: absolute;
+        //         background-image: url(/src/assets/png/circle-bar.png);
+        //         background-repeat: no-repeat;
+        //         background-size: cover;
+        //         background-position: center;
+        //     }
+
+        //     &__indicator-img {
+        //         position: absolute;
+        //         right: 0;
+        //         margin-top: 3%;
+        //         // margin: auto 0;
+        //         &_light {
+        //             // bottom: 5%;
+
+        //         }
+
+        //         &_sound {}
+
+        //         &_temperature {}
+        //     }
+
+        //     &__indicator-filled {
+        //         display: none
+        //     }
+        // }
     }
 }
 
@@ -57,6 +131,47 @@
         .configuration {
             &__container {
                 width: 460px;
+            }
+        }
+
+        .quality-windows {
+            &__container {
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: flex-end;
+
+                text-align: center;
+
+            }
+
+            &__content {
+                align-self: center;
+
+                max-width: 400px;
+
+            }
+
+            &__img {
+                width: 259px;
+                margin: 0 auto 20px;
+            }
+
+            &__title {
+                font-size: 36px;
+                line-height: 1.2;
+
+
+            }
+
+            &__subtitle {
+                font-size: 20px;
+                line-height: 1.4;
+
+                margin-bottom: 20px;
+            }
+
+            &__button {
+                width: 259px;
             }
         }
     }
@@ -80,8 +195,49 @@
             &__more-list {
                 justify-content: center;
             }
+
             &__elem {
                 max-width: 600px;
+            }
+        }
+
+        .quality-windows {
+            &__container {
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: flex-end;
+
+                text-align: center;
+
+            }
+
+            &__content {
+                align-self: center;
+
+                max-width: 400px;
+            }
+
+            &__img {
+                width: 335px;
+                margin: 0 auto 20px;
+            }
+
+            &__title {
+                font-size: 36px;
+                line-height: 1.2;
+
+
+            }
+
+            &__subtitle {
+                font-size: 20px;
+                line-height: 1.4;
+
+                margin-bottom: 20px;
+            }
+
+            &__button {
+                width: 259px;
             }
         }
     }
@@ -113,6 +269,13 @@
 
             &__elem {
                 max-width: 300px;
+            }
+        }
+        .quality-windows {
+            
+            &__img {
+                width: 345px;
+                margin: 0 auto 20px;
             }
         }
     }
