@@ -11,6 +11,7 @@
         }
 
         .configuration {
+            grid-template-columns: 1fr;
             &__container {
                 width: 300px;
             }
@@ -19,6 +20,9 @@
         .advantages {
             &__elem {
                 max-width: 300px;
+            }
+            &__more-list{
+                grid-template-columns: 1fr;
             }
         }
 
@@ -70,6 +74,7 @@
                 font-size: 25px;
                 line-height: 1.2;
 
+                width: 280px;
 
             }
 
@@ -129,8 +134,17 @@
         }
 
         .configuration {
+            grid-template-columns: 1fr;
             &__container {
                 width: 460px;
+            }
+        }
+        .advantages {
+            &__elem {
+                max-width: 300px;
+            }
+            &__more-list{
+                grid-template-columns: 1fr;
             }
         }
 
@@ -186,14 +200,15 @@
         }
 
         .configuration {
+            grid-template-columns: 1fr 1fr;
             &__container {
                 width: 298px;
             }
         }
 
         .advantages {
-            &__more-list {
-                justify-content: center;
+            &__more-list{
+                grid-template-columns: 1fr;
             }
 
             &__elem {
@@ -226,7 +241,6 @@
                 font-size: 36px;
                 line-height: 1.2;
 
-
             }
 
             &__subtitle {
@@ -253,6 +267,7 @@
         }
 
         .configuration {
+            grid-template-columns: 1fr 1fr;
             &__container {
                 width: 458px;
             }

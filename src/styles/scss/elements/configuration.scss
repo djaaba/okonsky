@@ -1,7 +1,8 @@
 .configuration{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 24px;
+    grid-row-gap: 32px;
     &__container{
         margin-left: auto;
         margin-right: auto;

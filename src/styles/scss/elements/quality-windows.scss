@@ -7,14 +7,14 @@
     &__content{
         align-self: center;
         max-width: 560px;
-
+        // margin-right: 40px;
     }
     &__title{
         font-weight: 600;
         font-size: 48px;
 
+        width: 560px;
         margin-bottom: 24px;
-
     }
     &__subtitle{
         font-size: 22px;
@@ -22,6 +22,7 @@
         color: rgba(0, 0, 0, 0.7);
         max-width: 560px;
         margin-bottom: 48px;
+        font-weight: 400;
     }
     span{
         color: $primary-color;
@@ -45,5 +46,6 @@
         border-radius: 75px;
         border: 0px;
 
+        font-weight: 50;
     }
 }
