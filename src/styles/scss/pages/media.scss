@@ -27,6 +27,9 @@
         }
 
         .profiles {
+            &__list {
+                grid-template-columns: 1fr;
+            }
             &__wrapper {
                 max-width: 300px;
             }
@@ -147,7 +150,11 @@
                 grid-template-columns: 1fr;
             }
         }
-
+        .profiles{
+            &__list {
+                grid-template-columns: 1fr;
+            }
+        }
         .quality-windows {
             &__container {
                 display: flex;
@@ -174,7 +181,7 @@
                 font-size: 36px;
                 line-height: 1.2;
 
-
+                width: 100%;
             }
 
             &__subtitle {
@@ -215,7 +222,11 @@
                 max-width: 600px;
             }
         }
-
+        .profiles{
+            &__list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
         .quality-windows {
             &__container {
                 display: flex;
@@ -241,6 +252,8 @@
                 font-size: 36px;
                 line-height: 1.2;
 
+                width: 100%;
+                
             }
 
             &__subtitle {

@@ -10,6 +10,9 @@
 @import '/src/styles/scss/elements/quality-windows.scss';
 @import '/src/styles/scss/elements/profiles.scss';
 
+section{
+    margin: 0 auto;
+}
 body{
     // background-color: gray;
     font-family: Montserrat;

@@ -3,6 +3,8 @@ const fs = require('fs')
 const webpack = require('webpack')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const CopyPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 //
 
 const PATHS = {
@@ -21,7 +23,8 @@ module.exports = {
     },
     output: {
         filename: '[name].[contenthash].js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        // path: path.resolve(__dirname, '/src/assets/')
     },
     plugins: [
         new HTMLWebpackPlugin({
@@ -31,11 +34,22 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery'
         }),
+        new CopyPlugin({
+            patterns: [
+                { 
+                    from: path.resolve(__dirname, 'src/assets/'),
+                    to: path.resolve(__dirname, 'dist')
+                },
+            ],
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].[contenthash].css',
+        }),
         new CleanWebpackPlugin(),
-        ...PAGES.map(page => new HTMLWebpackPlugin({
-            template: `${PAGES_DIR}/${page}`,
-            filename: `./${page.replace(/\.pug/, '.html')}`
-        }))
+        // ...PAGES.map(page => new HTMLWebpackPlugin({
+        //     template: `${PAGES_DIR}/${page}`,
+        //     filename: `./${page.replace(/\.pug/, '.html')}`
+        // }))
     ],
     devServer: {
         open: true,
@@ -45,7 +59,14 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                        },
+                    },
+                'css-loader'
+                ]
             },
             {
                 test: /\.s[ac]ss$/i,
