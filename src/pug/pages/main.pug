@@ -10,19 +10,20 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title #{title}
   body(class=pageClass)
+    //- <a href="#" class="open-popup">Открыть попап</a>
+    include ../modules/popup
     .wrapper
-      nav.header__navigation
-        a.header__logo
-          img()
-        a.header__link Профили
-        a.header__link Конфигурации
-        a.header__link Бесплатный замер
-        a.header__link Контакты
-        a.header__link(href = 'tel: +78633081372') + 7 (863) 309-13-72
+      include ../modules/header
       section.quality-windows
         include ../modules/quality-windows
+
+
       section.profiles
-        include ../modules/profiles
+        //- include ../modules/profiles-fixed
+
+
+      section.profiles
+        //- include ../modules/profiles
       include ../modules/reviews
       h2 Конфигурации
       section.configuration

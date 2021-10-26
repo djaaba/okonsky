@@ -8,31 +8,35 @@
 @import '/src/styles/scss/elements/review.scss';
 @import '/src/styles/scss/elements/advantages.scss';
 @import '/src/styles/scss/elements/quality-windows.scss';
-@import '/src/styles/scss/elements/profiles.scss';
+// @import '/src/styles/scss/elements/profiles.scss';
+@import '/src/styles/scss/elements/profiles-fixed.scss';
+@import '/src/styles/scss/elements/header.scss';
 
-section{
+
+@import '/src/styles/scss/elements/popup.scss';
+
+section {
     margin: 0 auto;
 }
-body{
-    // background-color: gray;
+
+body {
     font-family: Montserrat;
 
 }
-.wrapper{
-    max-width: 1182px;
-    margin-left: auto;
-    margin-right: auto;
 
-    // background-color: green;
+.wrapper {
+    width: 1182px;
+    margin: 0 auto;
 }
 
-h1{
+h1 {
     font-style: normal;
     font-weight: 600;
     font-size: 48px;
     line-height: 57px;
 }
-h2{
+
+h2 {
     font-style: normal;
     font-weight: 600;
     font-size: 42px;
@@ -40,29 +44,33 @@ h2{
 
     margin-bottom: 48px;
 }
-h3{
+
+h3 {
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
     line-height: 30px;
 }
-h4{
+
+h4 {
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 26px;
 }
-h5{
+
+h5 {
     font-style: normal;
     font-weight: normal;
     font-size: 22px;
     line-height: 30px;
 }
-h6{
-    
-}
-.arrow-next{
+
+h6 {}
+
+.arrow-next {
     @extend %arrow;
+
     // position: absolute;
     // right: 0;
     // bottom: 0;
@@ -71,14 +79,17 @@ h6{
             right: -8px;
             transform: rotate(45deg);
         }
+
         &:before {
             right: -8px;
             transform: rotate(-45deg);
         }
     }
 }
-.arrow-prev{
+
+.arrow-prev {
     @extend %arrow;
+
     // position: absolute;
     // left: 0;
     // bottom: 0;
@@ -87,10 +98,10 @@ h6{
             left: -8px;
             transform: rotate(135deg);
         }
+
         &:before {
             left: -8px;
             transform: rotate(-135deg);
         }
     }
 }
-
