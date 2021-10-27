@@ -1,29 +1,35 @@
 .profiles {
+    width: 1000px;
     &__container {
-        max-width: 50%;
+        max-width: 100%;
     }
-    
+
     &__list {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-column-gap: 40px;
+        // grid-column-gap: 40px;
         grid-row-gap: 24px;
+
+        align-items: center;
+        justify-content: center;
     }
-    
+
     &__elem {
         width: 460px;
+        background-color: white;
         border-radius: 12px;
-        
-        // background-color: gold;
 
+        margin: auto;
     }
-    &__wrapper{
+
+    &__wrapper {
         width: 396px;
         margin: 0 auto;
     }
-    &__content{
+
+    &__content {
         display: flex;
-        padding: 32px 0;    
+        padding: 32px 0;
     }
 
     &__text {
@@ -93,12 +99,13 @@
 
     &__indicator-list {
         padding-bottom: 18px;
+
         img {
             margin-top: auto;
             margin-bottom: auto;
         }
     }
-    
+
     &__indicator-elem {
         display: flex;
         margin-bottom: 12px;
@@ -134,36 +141,42 @@
     &__indicator-img_margin {
         margin-right: 11px;
     }
+
     &__indicator-blank {
         width: 128px;
         height: 14px;
         background: rgba(0, 0, 0, 0.08);
         border-radius: 7px;
         margin: auto 0 auto 0;
-    
+
     }
-    
+
     &__indicator-filled {
         width: 75%;
         height: 100%;
         border-radius: 7px;
+
         &_orange {
             background: #F36819;
         }
+
         &_green {
             background: #4AC120;
             width: 30%;
         }
+
         &_yellow {
             background: #F3B619;
             width: 100%;
         }
     }
+
     &__button {
         width: 100%;
         text-align: right;
         padding-bottom: 32px;
-        button{
+
+        button {
             font-style: normal;
             font-weight: 600;
             font-size: 18px;
@@ -173,13 +186,13 @@
             border-radius: 32px;
             background: white;
             padding: 14px 40px;
-    
+
             &:hover {
                 color: white;
                 background: $primary-color;
                 transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
             }
         }
-        
+
     }
 }

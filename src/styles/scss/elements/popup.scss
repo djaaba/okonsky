@@ -13,7 +13,7 @@ body.lock{
     pointer-events: none; // Запрещаем ему быть целью событий
     transition: all 0.8s ease 0s;
 
-    z-index: 155 !important;
+    z-index: 4;
 }
 
 .popup__bg.active {

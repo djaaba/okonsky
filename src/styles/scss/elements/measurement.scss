@@ -1,0 +1,121 @@
+.measurement {
+    background: url(/src/assets/png/red-form.png) no-repeat;
+    background-size: cover;
+    background-position: left center;
+    margin-bottom: 50px;
+
+    &__content {
+        color: black;
+        padding-top: 48px;
+        padding-bottom: 32px;
+
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 70px;
+
+        margin-bottom: 40px;
+    }
+
+    &__subtitles-list {
+        display: flex;
+
+        margin-bottom: 64px;
+        font-weight: 600;
+    }
+
+    &__subtitle-elem {
+        margin-right: 81px;
+        color: $primary-color;
+    }
+
+    &__subtitle-numbers {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 96px;
+        line-height: 105px;
+
+        span {
+            font-size: 48px;
+        }
+    }
+
+    &__subtitle-text {
+        color: rgba(0, 0, 0, 0.7);
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 20px;
+
+        max-width: 105px;
+
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        letter-spacing: 0.015em;
+        text-transform: uppercase;
+        line-height: 20px;
+    }
+
+    &__inputs-list {
+        display: flex;
+        margin-bottom: 32px;
+    }
+
+    &__input {
+        padding: 0 20px;
+
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.33;
+
+        border: 0px;
+        height: 60px;
+
+        height: 56px;
+        border-radius: 12px;
+
+
+        &::placeholder {
+            color: grey;
+        }
+    }
+
+    &__input-elem {
+        margin-right: 16px;
+    }
+
+    &__button {
+        color: white;
+
+        padding: 15px 48px;
+
+        background: $primary-color;
+        box-shadow: 0px 2px 9px -1px rgba(203, 29, 29, 0.45);
+        border: 0px;
+        border-radius: 75px;
+
+        font-weight: 600;
+
+        height: 56px;
+    }
+
+    &__policy {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(0, 0, 0, 0.4);
+
+        span {
+            text-decoration: underline;
+        }
+    }
+
+    &__policy-margin {
+        margin-left: 16px;
+    }
+}

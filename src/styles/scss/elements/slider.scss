@@ -1,35 +1,42 @@
-.slider{
+.slider {
     min-width: 0;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    .slick-arrow{
+
+    .slick-arrow {
         position: absolute;
-        z-index: 10;
-        
+        z-index: 2;
+
         border: 0;
         font-size: 0;
 
         width: 50px;
         height: 50px;
     }
-    .slick-next{
+
+    .slick-next {
         right: 0;
         bottom: 0;
-        background: url('/src/assets/png/next-arrow.jpg') 0 100% no-repeat;
+        background: url('../../../assets/png/svg/next-arrow.svg') no-repeat;
+        // Добавить просто лишний css файл со стрелкой .slick-next{ background: url(./png/svg/next-arrow.svg) } после npm run build
     }
-    .slick-prev{
+
+    .slick-prev {
         left: 0;
         bottom: 0;
-        background: url('/src/assets/png/prev-arrow.jpg') 0 100% no-repeat;
+        background: url('../../../assets/png/svg/prev-arrow.svg') no-repeat;
+        // Добавить просто лишний css файл со стрелкой .slick-prev{ background: url(./png/svg/prev-arrow.svg) } после npm run build
     }
-    .slick-dots{
+
+    .slick-dots {
         display: flex;
         align-items: center;
         justify-content: center;
 
         margin-top: 72px;
-        button{
+
+        button {
             padding: 0;
             border: 0;
             margin: 0 16px;
@@ -41,19 +48,28 @@
             background-color: rgba(0, 0, 0, 0.2)
         }
     }
-    li.slick-active{
-        button{
+
+    li.slick-active {
+        button {
             background-color: $primary-color;
         }
-    } 
-    
-    .slick-track{
-        display: flex;
     }
-    .slick-list{
+
+    .slick-track {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .slick-list {
         overflow: hidden;
     }
-    .flex__column{
+
+    .flex__column {
         min-width: 0;
     }
+
+    .slick-slide {
+        padding: 0 12px;
+    }
+
 }

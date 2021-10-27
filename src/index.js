@@ -12,107 +12,17 @@ import "@fortawesome/fontawesome-free/js/fontawesome.min.js";
 //     $('.slider').slick('slickPrev');
 // });
 
-const popupLinks = document.querySelectorAll('.popup-link')
-// alert(popupLinks.length);
-const body = document.querySelector('body')
-const lockPadding = document.querySelectorAll('.lock-padding')
+let popupBg = document.querySelector('.popup__bg'); // Фон попап окна
+let popup = document.querySelector('.popup'); // Само окно
+let openPopupButtons = document.querySelectorAll('.open-popup'); // Кнопки для показа окна
+let closePopupButton = document.querySelector('.close-popup'); // Кнопка для скрытия окна
 
+const body = document.querySelector('.wrapper')
+
+let scrollWidth = window.innerWidth - document.body.clientWidth;
+const timeout = 800;
 let unlock = true;
 
-const timeout = 800
-
-if (popupLinks.length > 0) {
-    for (let i = 0; i < popupLinks.length; i++) {
-        const popupLink = popupLinks[i];
-        popupLink.addEventListener('click', function (e) {
-            const popupName = popupLink.getAttribute('href').replace('#', '');
-            const currentPopup = document.getElementById(popupName);
-            popupOpen(currentPopup);
-            e.preventDefault();
-        })
-    }
-}
-
-const popupCloseIcon = document.querySelectorAll('.close-popup');
-if (popupCloseIcon.length > 0) {
-    for (let i = 0; i < popupCloseIcon.length; i++) {
-        const EL = popupCloseIcon[i];
-        EL.addEventListener('click', function (e) {
-            popupClose(EL.closest('.popup'));
-            e.preventDefault();
-        });
-    }
-}
-
-function popupOpen(currentPopup) {
-    if (currentPopup && unlock) {
-        const popupActive = document.querySelector('.popup.open');
-        alert(popupActive.innerHTML)
-        if (popupActive) {
-            popupClose(popupActive, false);
-        } else {
-            bodyLock();
-        }
-        currentPopup.classList.add('open');
-        currentPopup.addEventListener("click", function (e) {
-            if (!e.target.closest('popup__content')) {
-                popupClose(e.target.closest('.popup'))
-            }
-        });
-    }
-}
-
-function popupClose(popupActive, doUnlock = true) {
-    if (unlock) {
-        popupActive.classList.remove('open');
-        if (doUnlock) {
-            bodyUnlock();
-        }
-    }
-}
-
-// function bodyLock() {
-//     const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
-//     if (lockPadding.length > 0) {
-//         for (let i = 0; i < lockPadding.length; i++) {
-//             const EL = lockPadding[i];
-//             EL.style.paddingRight = lockPaddingValue;
-//         }
-//     }
-
-//     body.style.paddingRight = lockPaddingValue;
-//     body.classList.add('lock');
-
-//     unlock = false;
-//     setTimeout(function () {
-//         unlock = true;
-//     }, timeout);
-// }
-
-// function bodyUnlock() {
-//     setTimeout(function () {
-//         if (lockPadding.length > 0) {
-//             for (let i = 0; i < lockPadding.length; i++) {
-//                 const EL = lockPadding[i]
-//                 EL.style.paddingRight = '0px';
-//             }
-//         }
-
-//         body.style.paddingRight = '0px';
-//         body.classList.remove('lock');
-//     }, timeout);
-//     unlock = false;
-//     setTimeout(function () {
-//         unlock = true;
-//     }, timeout);
-// }
-
-document.addEventListener('keydown', function (e) {
-    if (e.which == 27) {
-        const popupActive = document.querySelector('.popup.open');
-        popupClose(popupActive)
-    }
-})
 
 $('.slider').slick({
     arrows: true,
@@ -124,10 +34,14 @@ $('.slider').slick({
     touchThreshold: 6,
     waitForAnimate: false,
     dots: true,
+    // centerMode: true,
+    // variableWidth: true,
+    mobileFirst: true,
     responsive: [
         {
             breakpoint: 321,
             settings: {
+                mobileFirst:true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
             }
@@ -135,6 +49,7 @@ $('.slider').slick({
         {
             breakpoint: 481,
             settings: {
+                mobileFirst:true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
             }
@@ -142,33 +57,29 @@ $('.slider').slick({
         {
             breakpoint: 641,
             settings: {
+                mobileFirst:true,
                 slidesToShow: 2,
-                slidesToScroll: 2,
+                slidesToScroll: 1,
             }
         },
         {
             breakpoint: 961,
             settings: {
+                mobileFirst:true,
                 slidesToShow: 2,
-                slidesToScroll: 2,
+                slidesToScroll: 1,
             }
         },
         {
             breakpoint: 1201,
             settings: {
+                mobileFirst:true,
                 slidesToShow: 3,
-                slidesToScroll: 3,
+                slidesToScroll: 1,
             }
         },
     ]
 });
-
-let popupBg = document.querySelector('.popup__bg'); // Фон попап окна
-let popup = document.querySelector('.popup'); // Само окно
-let openPopupButtons = document.querySelectorAll('.open-popup'); // Кнопки для показа окна
-let closePopupButton = document.querySelector('.close-popup'); // Кнопка для скрытия окна
-
-let scrollWidth = window.innerWidth - document.body.clientWidth;
 
 openPopupButtons.forEach((button) => { // Перебираем все кнопки
     button.addEventListener('click', (e) => { // Для каждой вешаем обработчик событий на клик
@@ -207,9 +118,9 @@ function bodyLock() {
         unlock = true;
     }, timeout);
 }
+
 function bodyUnlock() {
     console.log()
-    // document.querySelector('popup').style.top = '100px'
     body.style.width = window.innerWidth - scrollWidth;
     body.classList.remove('lock');
     unlock = false;
@@ -217,3 +128,10 @@ function bodyUnlock() {
         unlock = true;
     }, timeout);
 }
+
+$('.menu-burger__header').click(function () {
+    $('.menu-burger__header').toggleClass('open-menu');
+    $('.header__nav').toggleClass('open-menu');
+    $('body').toggleClass('fixed-page');
+});
+
