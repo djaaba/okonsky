@@ -11,31 +11,14 @@ html(lang="en")
     title #{title}
   body(class=pageClass)
     include ../modules/popup
-    //- include ../modules/header
+    include ../modules/header
     include ../modules/quality-windows
     .wrapper
-      //- <header class = "header">
-      //-     <div class="container header__container">
-      //-       <div class="menu-burger__header">
-      //-           <span></span>
-      //-       </div>
-      //-       <nav class="header__nav">
-      //-         <ul class="menu header__menu">
-      //-             <li><a href="" class="menu__item">Главная</a></li>
-      //-             <li><a href="" class="menu__item">Товары</a></li>
-      //-             <li><a href="" class="menu__item">Акции</a></li>
-      //-             <li><a href="" class="menu__item">Новинки</a></li>
-      //-             <li><a href="" class="menu__item">Доставка</a></li>
-      //-             <li><a href="" class="menu__item">Контакты</a></li>
-      //-         </ul>
-      //-       </nav>
-      //-     </div>
-      //- </header>
-      
       h2 
         a(name = "profiles") Профили
       section.profile
         include ../modules/profiles
+        include ../modules/profiles-mobile
       h2
         a(name = "configuration") Конфигурации
       section.configuration
@@ -66,16 +49,5 @@ html(lang="en")
     .wrapper
       h2 
         a(name = "contacts") Контакты
-      section.contacts
-        iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac9ca71dd3c53fc35584613b512fef9d2adde5ea323a202058eecdc0a0b648feb&amp;source=constructor" frameborder="0")
-        ul.contacts__list
-          .contacts__elem
-            p.contacts__office Офис на Северном
-            p.contacts__adress пр. Космонавтов, 2
-            a.contacts__phone(href = 'tel: +78633091372') +7 (863) 309-13-72
-          .contacts__elem
-            p.contacts__office Офис на Буденновском
-            p.contacts__adress пр. Буденновский, 102
-            a.contacts__phone(href = 'tel: +78633091372') +7 (863) 309-13-72
-
+      //- include ../modules/map
     block script

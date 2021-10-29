@@ -5,25 +5,6 @@ import "@fortawesome/fontawesome-free/js/solid.js";
 import "@fortawesome/fontawesome-free/js/regular.js";
 import "@fortawesome/fontawesome-free/js/fontawesome.min.js";
 
-// $('.arrow-next').on('click', function () {
-//     $('.slider').slick('slickNext');
-// });
-// $('.arrow-prev').on('click', function () {
-//     $('.slider').slick('slickPrev');
-// });
-
-let popupBg = document.querySelector('.popup__bg'); // Фон попап окна
-let popup = document.querySelector('.popup'); // Само окно
-let openPopupButtons = document.querySelectorAll('.open-popup'); // Кнопки для показа окна
-let closePopupButton = document.querySelector('.close-popup'); // Кнопка для скрытия окна
-
-const body = document.querySelector('.wrapper')
-
-let scrollWidth = window.innerWidth - document.body.clientWidth;
-const timeout = 800;
-let unlock = true;
-
-
 $('.slider').slick({
     arrows: true,
     slidesToShow: 3,
@@ -41,7 +22,7 @@ $('.slider').slick({
         {
             breakpoint: 321,
             settings: {
-                mobileFirst:true,
+                mobileFirst: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
             }
@@ -49,7 +30,7 @@ $('.slider').slick({
         {
             breakpoint: 481,
             settings: {
-                mobileFirst:true,
+                mobileFirst: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
             }
@@ -57,7 +38,7 @@ $('.slider').slick({
         {
             breakpoint: 641,
             settings: {
-                mobileFirst:true,
+                mobileFirst: true,
                 slidesToShow: 2,
                 slidesToScroll: 1,
             }
@@ -65,7 +46,7 @@ $('.slider').slick({
         {
             breakpoint: 961,
             settings: {
-                mobileFirst:true,
+                mobileFirst: true,
                 slidesToShow: 2,
                 slidesToScroll: 1,
             }
@@ -73,13 +54,26 @@ $('.slider').slick({
         {
             breakpoint: 1201,
             settings: {
-                mobileFirst:true,
+                mobileFirst: true,
                 slidesToShow: 3,
                 slidesToScroll: 1,
             }
         },
     ]
 });
+
+// #popup
+
+let popupBg = document.querySelector('.popup__bg'); // Фон попап окна
+let popup = document.querySelector('.popup'); // Само окно
+let openPopupButtons = document.querySelectorAll('.open-popup'); // Кнопки для показа окна
+let closePopupButton = document.querySelector('.close-popup'); // Кнопка для скрытия окна
+
+const body = document.querySelector('.wrapper')
+
+let scrollWidth = window.innerWidth - document.body.clientWidth;
+const timeout = 800;
+let unlock = true;
 
 openPopupButtons.forEach((button) => { // Перебираем все кнопки
     button.addEventListener('click', (e) => { // Для каждой вешаем обработчик событий на клик
@@ -120,7 +114,6 @@ function bodyLock() {
 }
 
 function bodyUnlock() {
-    console.log()
     body.style.width = window.innerWidth - scrollWidth;
     body.classList.remove('lock');
     unlock = false;
@@ -129,9 +122,32 @@ function bodyUnlock() {
     }, timeout);
 }
 
-$('.menu-burger__header').click(function () {
-    $('.menu-burger__header').toggleClass('open-menu');
-    $('.header__nav').toggleClass('open-menu');
-    $('body').toggleClass('fixed-page');
-});
+// #progress bar
+function progressView() {
+    let diagramBox = document.querySelectorAll('.diagram.progress');
+    diagramBox.forEach((box) => {
+        let deg = (360 * box.dataset.percent / 100) + 180;
+        if (box.dataset.percent >= 50) {
+            box.classList.add('over_50');
+        } else {
+            box.classList.remove('over_50');
+        }
+        box.querySelector('.piece.right').style.transform = 'rotate(' + deg + 'deg)';
+    });
+}
+progressView();
 
+let opened = false;
+
+// document.querySelector('.header__burger').addEventListener('click', function () {
+//     if (!opened){
+//         document.querySelector('.burger span').classList.toggle('active');
+//         document.querySelector('.menu').classList.toggle("animate");
+//         opened = true;
+//     }else{
+//         document.querySelector('.burger span').classList.toggle('active');
+//         document.querySelector('.menu').classList.toggle("animate");
+//         opened = false;
+//     }
+
+// })

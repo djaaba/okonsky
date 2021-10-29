@@ -1,13 +1,7 @@
 .profiles {
-    width: 1000px;
-    &__container {
-        max-width: 100%;
-    }
-
     &__list {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        // grid-column-gap: 40px;
         grid-row-gap: 24px;
 
         align-items: center;
@@ -50,7 +44,6 @@
 
         margin: auto 0;
         margin-right: 12px;
-
     }
 
     &__title {
@@ -59,7 +52,6 @@
         font-weight: 600;
         font-size: 28px;
         line-height: 30px;
-
     }
 
     &__subtitle {
@@ -68,6 +60,8 @@
         font-size: 14px;
         line-height: 19px;
         color: rgba(0, 0, 0, 0.7);
+
+        width: 240px;
     }
 
     &__price {
@@ -119,12 +113,6 @@
             margin-right: 10px;
             /* Add content: \2022 is the CSS Code/unicode for a bullet */
         }
-
-        // list-style-type: square !important;
-        // list-style-position: inside;
-        // display:list-item;
-        // list-style-position:outside;
-
     }
 
     &__indicator-img {
@@ -196,3 +184,4 @@
 
     }
 }
+

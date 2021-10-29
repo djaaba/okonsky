@@ -46,33 +46,85 @@ mixin item(src, name)
           if block 
             block
 
+//- profile desk
 mixin profile(flag, brand, text, price, subscrip1, subscrip2, subscrip3)
   li.profiles__elem
     .profiles__wrapper
-        .profiles__content
-            .profiles__text
-                .profiles__brand-block
-                    img.profiles__brand-img(src = flag)
-                    p.profiles__title=brand
-                p.profiles__subtitle=text
-                p.profiles__price Цена за м²
-                p.profiles__price-field=price
-            img.profiles__img(src = '/src/assets/png/window.png')
+      .profiles__content
+        .profiles__text
+          .profiles__brand-block
+            img.profiles__brand-img(src = flag)
+            p.profiles__title=brand
+          p.profiles__subtitle=text
+          p.profiles__price Цена за м²
+          p.profiles__price-field=price
+        img.profiles__img(src = '/src/assets/png/window.png')
+      ul.profiles__indicator-list
+        li.profiles__indicator-elem
+            p.profiles__subtitle.profiles__subtitle_margin=subscrip1
+            img.profiles__indicator-img.profiles__indicator-img_margin.profiles__indicator-img_temperature(src = '/src/assets/png/svg/temperature.svg')
+            .profiles__indicator-blank
+                .profiles__indicator-filled.profiles__indicator-filled_orange
+        li.profiles__indicator-elem
+            p.profiles__subtitle.profiles__subtitle_margin=subscrip2
+            img.profiles__indicator-img.profiles__indicator-img_margin.profiles__indicator-img_sound(src = '/src/assets/png/svg/sound.svg')
+            .profiles__indicator-blank
+                .profiles__indicator-filled.profiles__indicator-filled_green
+        li.profiles__indicator-elem
+            p.profiles__subtitle.profiles__subtitle_margin=subscrip3
+            img.profiles__indicator-img.profiles__indicator-img_margin.profiles__indicator-img_light(src = '/src/assets/png/svg/light.svg')
+            .profiles__indicator-blank
+                .profiles__indicator-filled.profiles__indicator-filled_yellow
+      .profiles__button 
+          button.open-popup Заказать со скидкой
+
+//- profile mobile
+
+mixin profileMobile(flag, brand, text, price, subscrip1, subscrip2, subscrip3)
+  li.profiles__el
+    .profiles__mobile-wrapper
+      .profiles__container
+        img.profiles__img(src = '/src/assets/png/window.png')
         ul.profiles__indicator-list
-            li.profiles__indicator-elem
-                p.profiles__subtitle.profiles__subtitle_margin=subscrip1
-                img.profiles__indicator-img.profiles__indicator-img_margin.profiles__indicator-img_temperature(src = '/src/assets/png/svg/temperature.svg')
-                .profiles__indicator-blank
-                    .profiles__indicator-filled.profiles__indicator-filled_orange
-            li.profiles__indicator-elem
-                p.profiles__subtitle.profiles__subtitle_margin=subscrip2
-                img.profiles__indicator-img.profiles__indicator-img_margin.profiles__indicator-img_sound(src = '/src/assets/png/svg/sound.svg')
-                .profiles__indicator-blank
-                    .profiles__indicator-filled.profiles__indicator-filled_green
-            li.profiles__indicator-elem
-                p.profiles__subtitle.profiles__subtitle_margin=subscrip3
-                img.profiles__indicator-img.profiles__indicator-img_margin.profiles__indicator-img_light(src = '/src/assets/png/svg/light.svg')
-                .profiles__indicator-blank
-                    .profiles__indicator-filled.profiles__indicator-filled_yellow
-        .profiles__button 
-            button.open-popup Заказать со скидкой
+          li.profiles__indicator-li
+            .circle-bar_orange.circle-bar
+              .diagram.progress(data-percent="100")
+                .piece.left
+                .piece.right
+                .text
+                  div
+                    img(src = '/src/assets/png/svg/temperature.svg')
+          li.profiles__indicator-li
+            .circle-bar_green.circle-bar
+              .diagram.progress(data-percent="75")
+                .piece.left
+                .piece.right
+                .text
+                  div
+                    img(src = '/src/assets/png/svg/sound.svg')
+          li.profiles__indicator-li
+            .circle-bar_yellow.circle-bar
+              .diagram.progress(data-percent="25")
+                .piece.left
+                .piece.right
+                .text
+                  div
+                    img(src = '/src/assets/png/svg/light.svg')
+      .profiles__container
+        img.profiles__brand-img(src = flag)
+        .profiles__text
+          p.profiles__subtitle=text
+      .profiles__container
+        p.profiles__title=brand
+        .profiles__text
+          p.profiles__price Цена за м²
+          p.profiles__price-field=price
+      ul.profiles__indicator-list
+        li.profiles__indicator-elem
+          p.profiles__subtitle=subscrip1
+        li.profiles__indicator-elem
+          p.profiles__subtitle=subscrip2
+        li.profiles__indicator-elem
+          p.profiles__subtitle=subscrip3
+      .profiles__button 
+        button.open-popup Заказать со скидкой

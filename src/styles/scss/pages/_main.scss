@@ -1,18 +1,21 @@
 @import './extends.scss';
 @import '/src/styles/reset.css';
 @import '/src/styles/scss/fonts.scss';
+
 @import './media.scss';
 
-@import '/src/styles/scss/elements/configuration.scss';
-@import '/src/styles/scss/elements/slider.scss';
-@import '/src/styles/scss/elements/review.scss';
-@import '/src/styles/scss/elements/advantages.scss';
-@import '/src/styles/scss/elements/quality-windows.scss';
-@import '/src/styles/scss/elements/profiles.scss';
+// @import '/src/styles/scss/elements/configuration.scss';
+// @import '/src/styles/scss/elements/slider.scss';
+// @import '/src/styles/scss/elements/review.scss';
+// @import '/src/styles/scss/elements/advantages.scss';
+// @import '/src/styles/scss/elements/quality-windows.scss';
+// @import '/src/styles/scss/elements/profiles.scss';
 @import '/src/styles/scss/elements/header.scss';
-@import '/src/styles/scss/elements/installment.scss';
-@import '/src/styles/scss/elements/measurement.scss';
-@import '/src/styles/scss/elements/contacts.scss';
+// @import '/src/styles/scss/elements/installment.scss';
+// @import '/src/styles/scss/elements/measurement.scss';
+// @import '/src/styles/scss/elements/contacts.scss';
+// @import '/src/styles/scss/elements/circle-bar.scss';
+// @import '/src/styles/scss/elements/hamburger.scss';
 
 @import '/src/styles/scss/elements/popup.scss';
 
@@ -22,12 +25,11 @@ section {
 
 html {
     scroll-behavior: smooth;
-
 }
-body {
-    font-family: Montserrat;
-    background: #FDF8F8;
 
+body {
+    font-family: 'Montserrat';
+    background: #FDF8F8;
 }
 
 .wrapper {
@@ -70,44 +72,4 @@ h5 {
     font-weight: normal;
     font-size: 22px;
     line-height: 30px;
-}
-
-h6 {}
-
-.arrow-next {
-    @extend %arrow;
-
-    // position: absolute;
-    // right: 0;
-    // bottom: 0;
-    div {
-        &:after {
-            right: -8px;
-            transform: rotate(45deg);
-        }
-
-        &:before {
-            right: -8px;
-            transform: rotate(-45deg);
-        }
-    }
-}
-
-.arrow-prev {
-    @extend %arrow;
-
-    // position: absolute;
-    // left: 0;
-    // bottom: 0;
-    div {
-        &:after {
-            left: -8px;
-            transform: rotate(135deg);
-        }
-
-        &:before {
-            left: -8px;
-            transform: rotate(-135deg);
-        }
-    }
 }

@@ -154,30 +154,37 @@
                 width: 300px;
             }
         }
-        .contacts{
+
+        .contacts {
             flex-direction: column;
-            iframe{
+
+            iframe {
                 margin-right: 0;
                 margin-bottom: 30px;
                 width: 250px;
                 height: 250px;
             }
-            &__list{
+
+            &__list {
                 width: 70%;
                 align-items: left;
             }
-            &__office{
+
+            &__office {
                 font-size: 24px;
             }
-            &__phone{
+
+            &__phone {
                 font-size: 14px;
                 color: rgb(77, 77, 77);
             }
-            &__adress{
+
+            &__adress {
                 font-size: 18px;
             }
-            
+
         }
+
         .advantages {
             &__elem {
                 max-width: 300px;
@@ -209,41 +216,9 @@
 
             &__price-field {}
         }
-
-
-
-        // .profiles {
-        //     &__indicator-blank {
-        //         width: 46px;
-        //         height: 46px;
-        //         // background-color: green;
-        //         background: rgba(0, 0, 0, 0);
-        //         // position: absolute;
-        //         background-image: url(/src/assets/png/circle-bar.png);
-        //         background-repeat: no-repeat;
-        //         background-size: cover;
-        //         background-position: center;
-        //     }
-
-        //     &__indicator-img {
-        //         position: absolute;
-        //         right: 0;
-        //         margin-top: 3%;
-        //         // margin: auto 0;
-        //         &_light {
-        //             // bottom: 5%;
-
-        //         }
-
-        //         &_sound {}
-
-        //         &_temperature {}
-        //     }
-
-        //     &__indicator-filled {
-        //         display: none
-        //     }
-        // }
+        .mobile{
+            display: none;
+        }
     }
 }
 
@@ -292,6 +267,7 @@
             }
 
         }
+
         .measurement {
             &__subtitles-list {
                 display: flex;
@@ -347,6 +323,7 @@
             }
 
         }
+
         .configuration {
             grid-template-columns: 1fr;
 
@@ -354,20 +331,24 @@
                 width: 460px;
             }
         }
-        .contacts{
+
+        .contacts {
             flex-direction: column;
-            iframe{
+
+            iframe {
                 margin-right: 0;
                 margin-bottom: 50px;
                 width: 475px;
                 height: 300px;
             }
-            &__list{
+
+            &__list {
                 width: 70%;
                 align-items: left;
-                
+
             }
         }
+
         .advantages {
             &__elem {
                 max-width: 300px;
@@ -425,11 +406,25 @@
                 width: 259px;
             }
         }
+        .mobile{
+            display: none;
+        }
     }
 }
 
 @media (min-width: 640px) and (max-width: 959px) {
     .wrapper {
+        .header{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            &__navigation{
+                background-color: black;
+                display: none;
+            }
+            // display: none !important;
+        }
+        
         .configuration {
             grid-template-columns: 1fr 1fr;
 
@@ -437,20 +432,24 @@
                 width: 298px;
             }
         }
-        .contacts{
+
+        .contacts {
             flex-direction: column;
-            iframe{
+
+            iframe {
                 margin-right: 0;
                 margin-bottom: 100px;
                 width: 550px;
                 height: 550px;
             }
-            &__list{
+
+            &__list {
                 width: 65%;
                 align-items: left;
-                
+
             }
         }
+
         .installment {
             &__subtitles-list {
                 display: flex;
@@ -489,10 +488,12 @@
                 padding-bottom: 20px;
 
                 width: 419px;
-                button{
+
+                button {
                     width: 100%;
                 }
-                input{
+
+                input {
                     width: 100%;
                 }
             }
@@ -504,6 +505,7 @@
             }
 
         }
+
         .measurement {
             &__subtitles-list {
                 display: flex;
@@ -552,10 +554,12 @@
                 padding-bottom: 20px;
 
                 width: 419px;
-                button{
+
+                button {
                     width: 100%;
                 }
-                input{
+
+                input {
                     width: 100%;
                 }
             }
@@ -567,6 +571,7 @@
             }
 
         }
+
         .advantages {
             &__more-list {
                 grid-template-columns: repeat(auto-fill, minmax(640px, 60px));
@@ -577,11 +582,83 @@
                 max-width: 600px;
             }
         }
+
         .profiles {
             &__list {
-                grid-template-columns: 1fr 1fr;
+                display: none;
             }
         }
+        // mobile-version
+        .profiles {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 24px;
+            &__container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                margin-bottom: 24px;
+            }
+
+            &__el {
+                width: 300px;
+                margin: 0 auto;
+            }
+
+            &__text {
+                margin-right: 0;
+            }
+
+            &__indicator-list {
+                padding-bottom: 0;
+
+                margin-bottom: 24px;
+            }
+
+            &__indicator-li {
+                margin-bottom: 12px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &__mobile-wrapper {
+                padding: 24px 24px 0 34px;
+
+                background: white;
+                border-radius: 12px;
+            }
+
+            &__title {
+                font-size: 22px;
+                line-height: 24px;
+            }
+
+            &__price {
+                padding-top: 0;
+            }
+
+            &__price-field {
+                font-size: 18px;
+                padding: 8px 8px 10px 8px;
+
+                max-width: 155px;
+            }
+
+            &__indicator-elem {
+                justify-content: start;
+            }
+
+            &__button {
+                button {
+                    text-align: center;
+                    padding: 12px 26px;
+                }
+            }
+        }
+
         .quality-windows {
             &__wrapper {
                 display: flex;
@@ -624,7 +701,6 @@
             }
         }
     }
-
 }
 
 @media (min-width: 960px) and (max-width: 1199px) {
@@ -636,6 +712,7 @@
                 width: 458px;
             }
         }
+
         .advantages {
             &__more-list {
                 justify-content: center;
@@ -649,11 +726,15 @@
                 max-width: 300px;
             }
         }
+
         .quality-windows {
             &__img {
                 width: 345px;
                 margin: 0 auto 20px;
             }
+        }
+        .mobile{
+            display: none;
         }
     }
 }
@@ -663,6 +744,7 @@
         .configuration {
             justify-content: space-between;
         }
+
         .advantages {
             &__more-list {
                 justify-content: center;
@@ -676,15 +758,8 @@
                 max-width: 300px;
             }
         }
-        .profiles{
-            &__list{
-                // grid-template-columns: repeat(auto-fill, minmax(500px, 500px));
-                // grid-template-columns: repeat(auto-fit, 460px);
-                // justify-content: space-between;
-            }
-            &__elem{
-                // width: 500px;
-            }
+        .mobile{
+            display: none;
         }
     }
 }
