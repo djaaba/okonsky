@@ -13,7 +13,7 @@ body.lock{
     pointer-events: none; // Запрещаем ему быть целью событий
     transition: all 0.8s ease 0s;
 
-    z-index: 4;
+    z-index: 12;
 }
 
 .popup__bg.active {
@@ -104,7 +104,7 @@ body.lock{
 
         margin-bottom: 25px;
 
-        width: 100%;
+        width: 400px;
     }
 
     &__button {

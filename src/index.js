@@ -69,9 +69,13 @@ let popup = document.querySelector('.popup'); // Само окно
 let openPopupButtons = document.querySelectorAll('.open-popup'); // Кнопки для показа окна
 let closePopupButton = document.querySelector('.close-popup'); // Кнопка для скрытия окна
 
-const body = document.querySelector('.wrapper')
+const body = document.querySelector('body')
 
 let scrollWidth = window.innerWidth - document.body.clientWidth;
+
+console.log(window.innerWidth)
+console.log(document.body.clientWidth)
+
 const timeout = 800;
 let unlock = true;
 
@@ -87,7 +91,6 @@ openPopupButtons.forEach((button) => { // Перебираем все кнопк
 });
 
 closePopupButton.addEventListener('click', () => { // Вешаем обработчик на крестик
-
     bodyUnlock()
 
     popupBg.classList.remove('active'); // Убираем активный класс с фона
@@ -95,7 +98,7 @@ closePopupButton.addEventListener('click', () => { // Вешаем обрабо�
 });
 
 document.addEventListener('click', (e) => { // Вешаем обработчик на весь документ
-    if (e.target === popupBg) { // Если цель клика - фот, то:
+    if (e.target === popupBg) { // Если цель клика - фон, то:
         popupBg.classList.remove('active'); // Убираем активный класс с фона
         popup.classList.remove('active'); // И с окна
 
@@ -106,6 +109,10 @@ document.addEventListener('click', (e) => { // Вешаем обработчик
 function bodyLock() {
     body.classList.add('lock');
     body.style.width = window.innerWidth - scrollWidth;
+    body.style.paddingRight = 17 + 'px';
+    document.querySelector('.wrapper').style.paddingRight = scrollWidth + 'px';
+    document.querySelector('.burger').style.right = 10 + scrollWidth + 'px';
+
 
     unlock = false;
     setTimeout(function () {
@@ -115,6 +122,9 @@ function bodyLock() {
 
 function bodyUnlock() {
     body.style.width = window.innerWidth - scrollWidth;
+    body.style.paddingRight = 0 + 'px';
+    document.querySelector('.wrapper').style.paddingRight = 0 + 'px';
+    document.querySelector('.burger').style.right = 10 + 'px';
     body.classList.remove('lock');
     unlock = false;
     setTimeout(function () {
@@ -137,17 +147,17 @@ function progressView() {
 }
 progressView();
 
+
+// #burger-menu
 let opened = false;
-
-// document.querySelector('.header__burger').addEventListener('click', function () {
-//     if (!opened){
-//         document.querySelector('.burger span').classList.toggle('active');
-//         document.querySelector('.menu').classList.toggle("animate");
-//         opened = true;
-//     }else{
-//         document.querySelector('.burger span').classList.toggle('active');
-//         document.querySelector('.menu').classList.toggle("animate");
-//         opened = false;
-//     }
-
-// })
+document.querySelector('.header__burger').addEventListener('click', function () {
+    if (!opened) {
+        document.querySelector('.burger span').classList.toggle('active');
+        document.querySelector('.menu').classList.toggle("animate");
+        opened = true;
+    } else {
+        document.querySelector('.burger span').classList.toggle('active');
+        document.querySelector('.menu').classList.toggle("animate");
+        opened = false;
+    }
+})
