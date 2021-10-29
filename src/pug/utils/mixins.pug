@@ -51,6 +51,31 @@ mixin profile(flag, brand, text, price, subscrip1, subscrip2, subscrip3)
   li.profiles__elem
     .profiles__wrapper
       .profiles__content
+        ul.profiles__indicator-list
+          li.profiles__indicator-li
+            .circle-bar_orange.circle-bar
+              .diagram.progress(data-percent="100")
+                .piece.left
+                .piece.right
+                .text
+                  div
+                    img(src = '/src/assets/png/svg/temperature.svg')
+          li.profiles__indicator-li
+            .circle-bar_green.circle-bar
+              .diagram.progress(data-percent="75")
+                .piece.left
+                .piece.right
+                .text
+                  div
+                    img(src = '/src/assets/png/svg/sound.svg')
+          li.profiles__indicator-li
+            .circle-bar_yellow.circle-bar
+              .diagram.progress(data-percent="25")
+                .piece.left
+                .piece.right
+                .text
+                  div
+                    img(src = '/src/assets/png/svg/light.svg')
         .profiles__text
           .profiles__brand-block
             img.profiles__brand-img(src = flag)
@@ -59,6 +84,14 @@ mixin profile(flag, brand, text, price, subscrip1, subscrip2, subscrip3)
           p.profiles__price Цена за м²
           p.profiles__price-field=price
         img.profiles__img(src = '/src/assets/png/window.png')
+      .profiles__mobile-content
+        img.profiles__brand-img(src = flag)
+        p.profiles__subtitle=text
+      .profiles__brand-price
+        p.profiles__title.profiles__title_margin=brand
+        .profiles__price-content
+          p.profiles__price Цена за м²
+          p.profiles__price-field=price
       ul.profiles__indicator-list
         li.profiles__indicator-elem
             p.profiles__subtitle.profiles__subtitle_margin=subscrip1

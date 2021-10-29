@@ -1,19 +1,30 @@
 @media (min-width: 320px) and (max-width: 479px) {
     .header {
-        height: 8vh !important;
-        &__navigation {
-            display: none !important;
+        height: 4vh !important;
+        .wrapper {
+            .header__navigation {
+                display: none ;
+            }
+
+            .header__burger {
+                display: block ;
+            }
         }
-        &__burger {
-            display: block !important;
-        }
-        .menu {}
     }
+    
     .wrapper {
+        .popup{
+            width: 280px ;
+            padding: 60px 20px ;
+        }
+        .popup.active {
+            transform: translate(-50%, -80%);
+            transition: 0.5s all;
+        }
         h2 {
             font-size: 30px;
         }
-        
+
         .installment {
             &__subtitles-list {
                 display: flex;
@@ -115,6 +126,7 @@
         }
 
         .quality-windows {
+            padding-top: 50px !important;
             &__wrapper {
                 display: flex;
                 flex-direction: column-reverse;
@@ -234,7 +246,27 @@
 }
 
 @media (min-width: 480px) and (max-width: 639px) {
+    .header {
+        height: 4vh !important;
+        .wrapper {
+            .header__navigation {
+                display: none ;
+            }
+
+            .header__burger {
+                display: block ;
+            }
+        }
+    }
     .wrapper {
+        .popup{
+            width: 350px ;
+            padding: 60px 20px ;
+        }
+        .popup.active {
+            transform: translate(-50%, -100%);
+            transition: 0.5s all;
+        }
         .installment {
             &__subtitles-list {
                 display: flex;
@@ -425,11 +457,24 @@
 }
 
 @media (min-width: 640px) and (max-width: 959px) {
+    .header {
+        height: 8vh !important;
+        .wrapper {
+            .header__navigation {
+                display: none ;
+            }
+
+            .header__burger {
+                display: block ;
+            }
+        }
+    }
     .wrapper {
         .header {
             height: 70px !important;
             width: 100%;
             height: 70px;
+
             &__navigation {
                 background-color: black;
                 display: none;
@@ -438,6 +483,7 @@
             &__burger {
                 display: block;
             }
+
             .menu {}
         }
 
@@ -718,6 +764,217 @@
                 width: 259px;
             }
         }
+        .profiles {
+            &__list {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-row-gap: 24px;
+        
+                align-items: center;
+                justify-content: center;
+            }
+        
+            &__elem {
+                width: 300px; ////
+                background-color: white;
+                border-radius: 12px;
+        
+                margin: auto;
+            }
+        
+            &__wrapper {
+                width: 100%;
+                margin: 24px;
+                margin: 0 auto;
+            }
+        
+            &__content {
+                display: flex;
+                flex-direction: row-reverse; ////
+                justify-content: space-around;
+                padding: 32px 0 0 0 !important;
+            }
+            &__brand-price{
+                display: flex; ////
+                align-items: center; ////
+                justify-content: center;
+            }
+            &__mobile-content{
+                display: flex; ////
+                justify-content: center; ////
+                align-items: center; ////
+            }
+            &__price-content{
+                
+            }
+            &__subtitle {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 19px;
+                color: rgba(0, 0, 0, 0.7);
+        
+                width: 216px; ////
+            }
+
+            &__text {
+                max-width: 212px;
+                display: none; ////
+                margin-right: 24px;
+            }
+        
+            &__brand-block {
+                display: flex;
+                margin-bottom: 18px;
+            }
+        
+            &__brand-img {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+        
+                margin: auto 0;
+                margin-right: 12px;
+            }
+        
+            &__title {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 22px; ////
+                line-height: 24px; ////
+                &_margin {
+                    margin-right: 12px;
+    
+                    // display: none; ////
+                }
+            }
+        
+            &__price {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 15px;
+                color: rgba(0, 0, 0, 0.4);
+        
+                padding: 16px 0 8px;
+            }
+        
+            &__price-field {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                color: $primary-color;
+                padding: 8px 0 10px 0; ////
+                border: 1px solid $primary-color;
+                border-radius: 12px;
+        
+                max-width: 155px;
+            }
+        
+            &__img {
+                width: 160px;
+                height: 170px;
+            }
+        
+            &__indicator-list {
+                padding-bottom: 0; ////
+                img {
+                    margin-top: auto;
+                    margin-bottom: auto;
+                }
+            }
+            
+            &__indicator-elem {
+                display: flex;
+                margin-bottom: 12px;
+                justify-content: center; ////
+                width: 100%;
+                &::before {
+                    content: "\2022";
+                    color: $primary-color;
+                    font-weight: bold;
+                    width: 4px;
+                    margin-right: 10px;
+                    /* Add content: \2022 is the CSS Code/unicode for a bullet */
+                }
+            }
+        
+            &__indicator-img {
+                width: 22px;
+                height: 22px;
+
+                display: none; ////
+            }
+        
+            &__subtitle_margin {
+                margin-right: 0px; ////
+                width: 200px; ////
+            }
+        
+            &__indicator-img_margin {
+                margin-right: 11px;
+
+                display: none; ////
+            }
+        
+            &__indicator-blank {
+                width: 128px;
+                height: 14px;
+                background: rgba(0, 0, 0, 0.08);
+                border-radius: 7px;
+                margin: auto 0 auto 0;
+
+                display: none; ////
+        
+            }
+        
+            &__indicator-filled {
+                width: 75%;
+                height: 100%;
+                border-radius: 7px;
+
+                display: none; ////
+        
+                &_orange {
+                    background: #F36819;
+                }
+        
+                &_green {
+                    background: #4AC120;
+                    width: 30%;
+                }
+        
+                &_yellow {
+                    background: #F3B619;
+                    width: 100%;
+                }
+            }
+        
+            &__button {
+                width: 100%;
+                text-align: center; ////
+                padding-bottom: 32px;
+        
+                button {
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: $primary-color;
+                    border: 1px solid $primary-color;
+                    border-radius: 32px;
+                    background: white;
+                    padding: 14px 20px; ////
+        
+                    &:hover {
+                        color: white;
+                        background: $primary-color;
+                        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+                    }
+                }
+        
+            }
+        }
     }
 }
 
@@ -781,5 +1038,6 @@
         .mobile {
             display: none;
         }
+        
     }
 }

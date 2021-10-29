@@ -1,20 +1,22 @@
 .header {
-    height: 25vh;
+    // height: $header-height;
     width: 100%;
     position: fixed;
     background-color: white;
     z-index: 10;
     padding-bottom: 15px;
+    padding-top: 15px;
     .wrapper{
         height: 100%;
         display: flex;
         align-items: center;
-        
     }
     &__burger{
         display: none;   
     }
     &__navigation {
+        padding-right: 15px;
+        padding-left: 15px;
         display: flex;
         width: 100%;
         height: 100%;
@@ -23,15 +25,7 @@
     }
     &__links-block {
         display: flex;
-
-
-        
         width: 542px;
-
-
-
-
-        // margin-right: 145px;
         justify-content: space-between;
     }
     &__link {

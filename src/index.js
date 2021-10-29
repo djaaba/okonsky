@@ -20,7 +20,7 @@ $('.slider').slick({
     mobileFirst: true,
     responsive: [
         {
-            breakpoint: 321,
+            breakpoint: 319,
             settings: {
                 mobileFirst: true,
                 slidesToShow: 1,
@@ -109,9 +109,11 @@ document.addEventListener('click', (e) => { // Вешаем обработчик
 function bodyLock() {
     body.classList.add('lock');
     body.style.width = window.innerWidth - scrollWidth;
-    body.style.paddingRight = 17 + 'px';
-    document.querySelector('.wrapper').style.paddingRight = scrollWidth + 'px';
-    document.querySelector('.burger').style.right = 10 + scrollWidth + 'px';
+    if (scrollWidth){
+        body.style.paddingRight = 17 + 'px';
+        document.querySelector('.wrapper').style.paddingRight = scrollWidth + 'px';
+        document.querySelector('.burger').style.right = 10 + scrollWidth + 'px';
+    }
 
 
     unlock = false;
@@ -122,9 +124,11 @@ function bodyLock() {
 
 function bodyUnlock() {
     body.style.width = window.innerWidth - scrollWidth;
-    body.style.paddingRight = 0 + 'px';
-    document.querySelector('.wrapper').style.paddingRight = 0 + 'px';
-    document.querySelector('.burger').style.right = 10 + 'px';
+    if (scrollWidth){
+        body.style.paddingRight = 0 + 'px';
+        document.querySelector('.wrapper').style.paddingRight = 0 + 'px';
+        document.querySelector('.burger').style.right = 10 + 'px';
+    }
     body.classList.remove('lock');
     unlock = false;
     setTimeout(function () {
@@ -150,7 +154,18 @@ progressView();
 
 // #burger-menu
 let opened = false;
-document.querySelector('.header__burger').addEventListener('click', function () {
+document.querySelector('.burger').addEventListener('click', function () {
+    if (!opened) {
+        document.querySelector('.burger span').classList.toggle('active');
+        document.querySelector('.menu').classList.toggle("animate");
+        opened = true;
+    } else {
+        document.querySelector('.burger span').classList.toggle('active');
+        document.querySelector('.menu').classList.toggle("animate");
+        opened = false;
+    }
+})
+document.querySelector('.menu').addEventListener('click', function () {
     if (!opened) {
         document.querySelector('.burger span').classList.toggle('active');
         document.querySelector('.menu').classList.toggle("animate");
