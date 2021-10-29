@@ -23,6 +23,13 @@ section {
     // margin: 0 auto;
 }
 
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 html {
     scroll-behavior: smooth;
 }
