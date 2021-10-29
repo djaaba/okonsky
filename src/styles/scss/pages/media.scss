@@ -219,35 +219,231 @@
 
         .profiles {
             &__list {
+                display: grid;
                 grid-template-columns: 1fr;
+                grid-row-gap: 24px;
+        
+                align-items: center;
+                justify-content: center;
             }
-
+        
+            &__elem {
+                width: 300px; ////
+                background-color: white;
+                border-radius: 12px;
+        
+                margin: auto;
+            }
+        
             &__wrapper {
-                // max-width: 300px;
+                width: 100%;
+                margin: 24px;
+                margin: 0 auto;
+            }
+        
+            &__content {
+                display: flex;
+                flex-direction: row-reverse; ////
+                justify-content: space-around;
+                padding: 32px 0 0 0 !important;
+
+                margin-bottom: 24px;
+            }
+            &__brand-price{
+                display: flex; ////
+                align-items: center; ////
+                justify-content: center;
+
+                margin-bottom: 35px;
+            }
+            &__mobile-content{
+                display: flex; ////
+                justify-content: center; ////
+                align-items: center; ////
+            }
+            &__price-content{
+                
+            }
+            &__subtitle {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 19px;
+                color: rgba(0, 0, 0, 0.7);
+        
+                width: 216px; ////
             }
 
-            &__button {
-                text-align: center;
+            &__text {
+                max-width: 212px;
+                display: none; ////
+                margin-right: 24px;
             }
-
-            &__img {
-                width: 30%;
-                height: 30%;
+        
+            &__brand-block {
+                display: flex;
+                margin-bottom: 18px;
+            }
+        
+            &__brand-img {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+        
                 margin: auto 0;
+                margin-right: 12px;
+            }
+        
+            &__title {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 22px; ////
+                line-height: 24px; ////
+                &_margin {
+                    margin-right: 12px;
+    
+                    // display: none; ////
+                }
+            }
+        
+            &__price {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 15px;
+                color: rgba(0, 0, 0, 0.4);
+        
+                padding: 16px 0 8px;
+            }
+        
+            &__price-field {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                color: $primary-color;
+                padding: 8px 5px 10px 5px; ////
+                border: 1px solid $primary-color;
+                border-radius: 12px;
+        
+                max-width: 155px;
+            }
+        
+            &__img {
+                width: 160px;
+                height: 170px;
+            }
+        
+            &__indicator-list {
+                padding-bottom: 0; ////
+                img {
+                    margin-top: auto;
+                    margin-bottom: auto;
+                }
             }
 
-            &__price-field {}
-        }
+            &__indicator-list {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            &__indicator-elem {
+                display: flex;
+                margin-bottom: 12px;
+                justify-content: center; ////
+                width: 100%;
+                &::before {
+                    content: "\2022";
+                    color: $primary-color;
+                    font-weight: bold;
+                    width: 4px;
+                    margin-right: 10px;
+                    /* Add content: \2022 is the CSS Code/unicode for a bullet */
+                }
+            }
+        
+            &__indicator-img {
+                width: 22px;
+                height: 22px;
 
-        .mobile {
-            display: none;
+                display: none; ////
+            }
+        
+            &__subtitle_margin {
+                margin-right: 0px; ////
+                width: 200px; ////
+            }
+        
+            &__indicator-img_margin {
+                margin-right: 11px;
+
+                display: none; ////
+            }
+        
+            &__indicator-blank {
+                width: 128px;
+                height: 14px;
+                background: rgba(0, 0, 0, 0.08);
+                border-radius: 7px;
+                margin: auto 0 auto 0;
+
+                display: none; ////
+        
+            }
+        
+            &__indicator-filled {
+                width: 75%;
+                height: 100%;
+                border-radius: 7px;
+
+                display: none; ////
+        
+                &_orange {
+                    background: #F36819;
+                }
+        
+                &_green {
+                    background: #4AC120;
+                    width: 30%;
+                }
+        
+                &_yellow {
+                    background: #F3B619;
+                    width: 100%;
+                }
+            }
+        
+            &__button {
+                width: 100%;
+                text-align: center; ////
+                padding-bottom: 32px;
+        
+                button {
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: $primary-color;
+                    border: 1px solid $primary-color;
+                    border-radius: 32px;
+                    background: white;
+                    padding: 14px 20px; ////
+        
+                    &:hover {
+                        color: white;
+                        background: $primary-color;
+                        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+                    }
+                }
+        
+            }
         }
     }
 }
 
 @media (min-width: 480px) and (max-width: 639px) {
     .header {
-        height: 4vh !important;
+        height: 6vh !important;
         .wrapper {
             .header__navigation {
                 display: none ;
@@ -405,7 +601,223 @@
 
         .profiles {
             &__list {
+                display: grid;
                 grid-template-columns: 1fr;
+                grid-row-gap: 24px;
+        
+                align-items: center;
+                justify-content: center;
+            }
+        
+            &__elem {
+                width: 300px; ////
+                background-color: white;
+                border-radius: 12px;
+        
+                margin: auto;
+            }
+        
+            &__wrapper {
+                width: 100%;
+                margin: 24px;
+                margin: 0 auto;
+            }
+        
+            &__content {
+                display: flex;
+                flex-direction: row-reverse; ////
+                justify-content: space-around;
+                padding: 32px 0 0 0 !important;
+
+                margin-bottom: 24px;
+            }
+            &__brand-price{
+                display: flex; ////
+                align-items: center; ////
+                justify-content: center;
+
+                margin-bottom: 35px;
+            }
+            &__mobile-content{
+                display: flex; ////
+                justify-content: center; ////
+                align-items: center; ////
+            }
+            &__price-content{
+                
+            }
+            &__subtitle {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 19px;
+                color: rgba(0, 0, 0, 0.7);
+        
+                width: 216px; ////
+            }
+
+            &__text {
+                max-width: 212px;
+                display: none; ////
+                margin-right: 24px;
+            }
+        
+            &__brand-block {
+                display: flex;
+                margin-bottom: 18px;
+            }
+        
+            &__brand-img {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+        
+                margin: auto 0;
+                margin-right: 12px;
+            }
+        
+            &__title {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 22px; ////
+                line-height: 24px; ////
+                &_margin {
+                    margin-right: 12px;
+    
+                    // display: none; ////
+                }
+            }
+        
+            &__price {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 15px;
+                color: rgba(0, 0, 0, 0.4);
+        
+                padding: 16px 0 8px;
+            }
+        
+            &__price-field {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                color: $primary-color;
+                padding: 8px 5px 10px 5px; ////
+                border: 1px solid $primary-color;
+                border-radius: 12px;
+        
+                max-width: 155px;
+            }
+        
+            &__img {
+                width: 160px;
+                height: 170px;
+            }
+        
+            &__indicator-list {
+                padding-bottom: 0; ////
+                img {
+                    margin-top: auto;
+                    margin-bottom: auto;
+                }
+            }
+
+            &__indicator-list {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            &__indicator-elem {
+                display: flex;
+                margin-bottom: 12px;
+                justify-content: center; ////
+                width: 100%;
+                &::before {
+                    content: "\2022";
+                    color: $primary-color;
+                    font-weight: bold;
+                    width: 4px;
+                    margin-right: 10px;
+                    /* Add content: \2022 is the CSS Code/unicode for a bullet */
+                }
+            }
+        
+            &__indicator-img {
+                width: 22px;
+                height: 22px;
+
+                display: none; ////
+            }
+        
+            &__subtitle_margin {
+                margin-right: 0px; ////
+                width: 200px; ////
+            }
+        
+            &__indicator-img_margin {
+                margin-right: 11px;
+
+                display: none; ////
+            }
+        
+            &__indicator-blank {
+                width: 128px;
+                height: 14px;
+                background: rgba(0, 0, 0, 0.08);
+                border-radius: 7px;
+                margin: auto 0 auto 0;
+
+                display: none; ////
+        
+            }
+        
+            &__indicator-filled {
+                width: 75%;
+                height: 100%;
+                border-radius: 7px;
+
+                display: none; ////
+        
+                &_orange {
+                    background: #F36819;
+                }
+        
+                &_green {
+                    background: #4AC120;
+                    width: 30%;
+                }
+        
+                &_yellow {
+                    background: #F3B619;
+                    width: 100%;
+                }
+            }
+        
+            &__button {
+                width: 100%;
+                text-align: center; ////
+                padding-bottom: 32px;
+        
+                button {
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: $primary-color;
+                    border: 1px solid $primary-color;
+                    border-radius: 32px;
+                    background: white;
+                    padding: 14px 20px; ////
+        
+                    &:hover {
+                        color: white;
+                        background: $primary-color;
+                        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+                    }
+                }
+        
             }
         }
 
@@ -448,10 +860,6 @@
             &__button {
                 width: 259px;
             }
-        }
-
-        .mobile {
-            display: none;
         }
     }
 }
@@ -645,84 +1053,6 @@
             }
         }
 
-        .profiles {
-            &__list {
-                display: none;
-            }
-        }
-
-        // mobile-version
-        .profiles {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            row-gap: 24px;
-
-            &__container {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                margin-bottom: 24px;
-            }
-
-            &__el {
-                width: 300px;
-                margin: 0 auto;
-            }
-
-            &__text {
-                margin-right: 0;
-            }
-
-            &__indicator-list {
-                padding-bottom: 0;
-
-                margin-bottom: 24px;
-            }
-
-            &__indicator-li {
-                margin-bottom: 12px;
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-
-            &__mobile-wrapper {
-                padding: 24px 24px 0 34px;
-
-                background: white;
-                border-radius: 12px;
-            }
-
-            &__title {
-                font-size: 22px;
-                line-height: 24px;
-            }
-
-            &__price {
-                padding-top: 0;
-            }
-
-            &__price-field {
-                font-size: 18px;
-                padding: 8px 8px 10px 8px;
-
-                max-width: 155px;
-            }
-
-            &__indicator-elem {
-                justify-content: start;
-            }
-
-            &__button {
-                button {
-                    text-align: center;
-                    padding: 12px 26px;
-                }
-            }
-        }
-
         .quality-windows {
             &__wrapper {
                 display: flex;
@@ -764,6 +1094,7 @@
                 width: 259px;
             }
         }
+
         .profiles {
             &__list {
                 display: grid;
@@ -793,11 +1124,15 @@
                 flex-direction: row-reverse; ////
                 justify-content: space-around;
                 padding: 32px 0 0 0 !important;
+
+                margin-bottom: 24px;
             }
             &__brand-price{
                 display: flex; ////
                 align-items: center; ////
                 justify-content: center;
+
+                margin-bottom: 35px;
             }
             &__mobile-content{
                 display: flex; ////
@@ -864,7 +1199,7 @@
                 font-weight: bold;
                 font-size: 18px;
                 color: $primary-color;
-                padding: 8px 0 10px 0; ////
+                padding: 8px 5px 10px 5px; ////
                 border: 1px solid $primary-color;
                 border-radius: 12px;
         
@@ -882,6 +1217,12 @@
                     margin-top: auto;
                     margin-bottom: auto;
                 }
+            }
+
+            &__indicator-list {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
             }
             
             &__indicator-elem {
@@ -1008,7 +1349,7 @@
                 margin: 0 auto 20px;
             }
         }
-
+        
         .mobile {
             display: none;
         }
