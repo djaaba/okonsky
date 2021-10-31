@@ -15,39 +15,43 @@ html(lang="en")
     include ../modules/quality-windows
     .wrapper
       include ../modules/popup
-      h2 
-        a(name = "profiles") Профили
-      section.profile
+      section.profiles
+        h2 
+          a(name = "profiles") Профили
         include ../modules/profiles
-      h2
-        a(name = "configuration") Конфигурации
       section.configuration
+        h2
+          a(name = "configuration") Конфигурации
         include ../modules/configuration
-    a(name = "installment")
-    include ../modules/installment
+      section
+        a(name = "installment")
+        include ../modules/installment
     .wrapper
-      h2 Наши преимущества
-      section.advantages
+      section
+        h2 Наши преимущества
         include ../modules/advantages
-        h3.advantages__more-header И это еще не всё:
-        ul.advantages__more-list  
-          li.advantages__more-elem
-            img(src = '/src/assets/png/svg/shield1.svg')
-            p.advantages__subtitle.advantages__subtitle_more-list-width Безопасная и качественная фурнитура прямиком из Германии
-          li.advantages__more-elem
-            img(src = '/src/assets/png/svg/eco.svg')
-            p.advantages__subtitle.advantages__subtitle_more-list-width Только экологически-чистые, нетоксичные, перерабатываемые материалы
-          li.advantages__more-elem
-            img(src = '/src/assets/png/svg/document.svg')
-            p.advantages__subtitle.advantages__subtitle_more-list-width Монтаж строго в соответствии с <span><a href='/src/assets/gost_30674-99.pdf'>ГОСТ 30674-1999</a></span>, <span><a href='/src/assets/gost_30971-02.pdf'>ГОСТ 30971-2002</a></span>
-          li.advantages__more-elem
-            img(src = '/src/assets/png/svg/colors.svg')
-            p.advantages__subtitle.advantages__subtitle_more-list-width Самые разнообразные цветовые решения, пластиковые окна с ламинацией под дерево
-      h2 Отзывы наших клиентов
-      include ../modules/reviews
-    include ../modules/measurement
+          h3.advantages__more-header И это еще не всё:
+          ul.advantages__more-list  
+            li.advantages__more-elem
+              img(src = '/src/assets/png/svg/shield1.svg')
+              p.advantages__subtitle.advantages__subtitle_more-list-width Безопасная и качественная фурнитура прямиком из Германии
+            li.advantages__more-elem
+              img(src = '/src/assets/png/svg/eco.svg')
+              p.advantages__subtitle.advantages__subtitle_more-list-width Только экологически-чистые, нетоксичные, перерабатываемые материалы
+            li.advantages__more-elem
+              img(src = '/src/assets/png/svg/document.svg')
+              p.advantages__subtitle.advantages__subtitle_more-list-width Монтаж строго в соответствии с <span><a href='/src/assets/gost_30674-99.pdf'>ГОСТ 30674-1999</a></span>, <span><a href='/src/assets/gost_30971-02.pdf'>ГОСТ 30971-2002</a></span>
+            li.advantages__more-elem
+              img(src = '/src/assets/png/svg/colors.svg')
+              p.advantages__subtitle.advantages__subtitle_more-list-width Самые разнообразные цветовые решения, пластиковые окна с ламинацией под дерево
+      section
+        h2 Отзывы наших клиентов
+        include ../modules/reviews
+    section
+      include ../modules/measurement
     .wrapper
-      h2 
-        a(name = "contacts") Контакты
-      include ../modules/map
+      section
+        h2 
+          a(name = "contacts") Контакты
+        include ../modules/map
     block script

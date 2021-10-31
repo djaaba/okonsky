@@ -1,9 +1,12 @@
 .profiles {
+    max-width: 960px;
+    margin: 0 auto;
+
     &__list {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-row-gap: 24px;
-
+        grid-column-gap: 40px;
         align-items: center;
         justify-content: center;
     }
@@ -17,13 +20,12 @@
     }
 
     &__wrapper {
-        width: 396px;
-        margin: 0 auto;
+        margin: 32px;
     }
 
     &__content {
         display: flex;
-        padding: 32px 0;
+        margin-bottom: 32px;
     }
 
     &__text {
@@ -78,9 +80,9 @@
         font-style: normal;
         font-weight: bold;
         font-size: 24px;
-        color: $primary-color;
+        color: #CB1D1D;
         padding: 8px 16px 10px 16px;
-        border: 1px solid $primary-color;
+        border: 1px solid #CB1D1D;
         border-radius: 12px;
 
         max-width: 155px;
@@ -107,7 +109,7 @@
 
         &::before {
             content: "\2022";
-            color: $primary-color;
+            color: #CB1D1D;
             font-weight: bold;
             width: 4px;
             margin-right: 10px;
@@ -122,7 +124,7 @@
 
     &__subtitle_margin {
         margin-right: 30px;
-        width: 190px;
+        width: 195px;
 
     }
 
@@ -162,26 +164,24 @@
     &__button {
         width: 100%;
         text-align: right;
-        padding-bottom: 32px;
 
         button {
             font-style: normal;
             font-weight: 600;
             font-size: 18px;
             line-height: 24px;
-            color: $primary-color;
-            border: 1px solid $primary-color;
+            color: #CB1D1D;
+            border: 1px solid #CB1D1D;
             border-radius: 32px;
             background: white;
             padding: 14px 40px;
 
             &:hover {
                 color: white;
-                background: $primary-color;
+                background: #CB1D1D;
                 transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
             }
         }
 
     }
 }
-

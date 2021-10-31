@@ -16,14 +16,14 @@
     }
 
     .slick-next {
-        right: 0;
+        right: -10px;
         bottom: 0;
         background: url('../../../assets/png/svg/next-arrow.svg') no-repeat;
         // Добавить просто лишний css файл со стрелкой .slick-next{ background: url(./png/svg/next-arrow.svg) } после npm run build
     }
 
     .slick-prev {
-        left: 0;
+        left: 15px;
         bottom: 0;
         background: url('../../../assets/png/svg/prev-arrow.svg') no-repeat;
         // Добавить просто лишний css файл со стрелкой .slick-prev{ background: url(./png/svg/prev-arrow.svg) } после npm run build

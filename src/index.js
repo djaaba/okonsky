@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-free/js/solid.js";
 import "@fortawesome/fontawesome-free/js/regular.js";
 import "@fortawesome/fontawesome-free/js/fontawesome.min.js";
 
+// #slider
 $('.slider').slick({
     arrows: true,
     slidesToShow: 3,
@@ -62,8 +63,7 @@ $('.slider').slick({
     ]
 });
 
-// #popup
-
+// #popup starts
 let popupBg = document.querySelector('.popup__bg'); // Фон попап окна
 let popup = document.querySelector('.popup'); // Само окно
 let openPopupButtons = document.querySelectorAll('.open-popup'); // Кнопки для показа окна
@@ -72,9 +72,6 @@ let closePopupButton = document.querySelector('.close-popup'); // Кнопка �
 const body = document.querySelector('body')
 
 let scrollWidth = window.innerWidth - document.body.clientWidth;
-
-console.log(window.innerWidth)
-console.log(document.body.clientWidth)
 
 const timeout = 800;
 let unlock = true;
@@ -114,8 +111,6 @@ function bodyLock() {
         document.querySelector('.wrapper').style.paddingRight = scrollWidth + 'px';
         document.querySelector('.burger').style.right = 10 + scrollWidth + 'px';
     }
-
-
     unlock = false;
     setTimeout(function () {
         unlock = true;
@@ -135,6 +130,7 @@ function bodyUnlock() {
         unlock = true;
     }, timeout);
 }
+// #popup end
 
 // #progress bar
 function progressView() {

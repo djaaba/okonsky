@@ -18,7 +18,14 @@
 @import '/src/styles/scss/elements/burger.scss';
 
 @import '/src/styles/scss/elements/popup.scss';
+button{
+    font-family: 'Montserrat';
 
+}
+input{
+    font-family: 'Montserrat';
+
+}
 section {
     // margin: 0 auto;
 }
@@ -58,6 +65,7 @@ h2 {
     line-height: 46px;
 
     margin-bottom: 48px;
+    margin-top: 40px;
 }
 
 h3 {

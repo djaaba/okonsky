@@ -1,13 +1,8 @@
-.configuration{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 24px;
-    grid-row-gap: 32px;
-    &__container{
+.configuration {
+    background-color: white;
+    &__container {
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 32px;
-
         height: 555px;
         width: 370px;
         background-color: #fff;
@@ -17,14 +12,17 @@
 
         border-radius: 8px;
     }
-    &__photo{
+
+    &__photo {
         width: 100%;
         border-radius: 8px;
     }
-    &__content{
+
+    &__content {
         margin: 32px 24px 0px 24px;
     }
-    &__title{
+
+    &__title {
         font-size: 22px;
         line-height: 25px;
 
@@ -32,30 +30,41 @@
 
         margin-bottom: 11px;
     }
-    &__list{
-        
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 24px;
+        grid-row-gap: 32px;
+
+        max-width: 1158px;
+
     }
-    &__item{
+
+    &__item {
         font-size: 16px;
 
         margin-bottom: 5px;
-        &:last-child{
-            .configuration__item__line{
+
+        &:last-child {
+            .configuration__item__line {
                 display: none;
             }
         }
-        &__row{
+
+        &__row {
             display: flex;
             justify-content: space-between;
 
             padding: 21px 0 21px 0;
         }
 
-        &__name{
+        &__name {
             color: black;
             vertical-align: bottom;
         }
-        &__price{
+
+        &__price {
             vertical-align: bottom;
 
             color: rgba(0, 0, 0, 0.7);
@@ -63,7 +72,8 @@
 
             font-size: 15px;
         }
-        &__line{
+
+        &__line {
             @extend %line;
         }
     }

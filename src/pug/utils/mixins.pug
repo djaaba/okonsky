@@ -42,7 +42,7 @@ mixin item(src, name)
     img.configuration__photo(src=src)
     .configuration__content
         p.configuration__title=name
-        ul.configuration__list
+        ul.configuration__item-list
           if block 
             block
 
