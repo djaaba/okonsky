@@ -11,8 +11,12 @@ html(lang="en")
     link(rel = "shortcut icon" href = "/src/assets/png/svg/favicon-32.ico" type = "image/x-icon")
     title #{title}
   body(class=pageClass)
-    include ../modules/header
-    include ../modules/quality-windows
+    section.header(id = 'header')
+      .header__wrapper
+        include ../modules/header
+    section.quality-windows
+      .wrapper
+        include ../modules/quality-windows
     .wrapper
       include ../modules/popup
     section.profiles.wrapper
@@ -51,7 +55,7 @@ html(lang="en")
     section
       include ../modules/measurement
     section.contacts
-      .contacts__wrapper.wrapper
+      .wrapper
         h2 
           a(name = "contacts") Контакты
         include ../modules/contacts

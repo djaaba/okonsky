@@ -8,7 +8,7 @@
         padding-bottom: 32px;
 
     }
-
+    
     &__title {
         font-style: normal;
         font-weight: 600;
@@ -34,7 +34,7 @@
         font-style: normal;
         font-weight: bold;
         font-size: 96px;
-        line-height: 105px;
+        // line-height: 105px;
 
         span {
             font-size: 48px;
@@ -76,13 +76,15 @@
         height: 56px;
         border-radius: 12px;
 
-
+        width: 87%;
         &::placeholder {
             color: grey;
         }
     }
-
+    
     &__input-elem {
+        width: 100%;
+        height: 56px;
         margin-right: 16px;
     }
 
@@ -98,7 +100,7 @@
 
         font-weight: 600;
 
-        height: 56px;
+        width: 100%;
     }
 
     &__policy {

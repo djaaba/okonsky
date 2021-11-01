@@ -1,6 +1,8 @@
 @media (min-width: 320px) and (max-width: 479px) {
     .header {
-        .wrapper {
+        &__wrapper {
+            margin: 25px 20px;
+
             .header__navigation {
                 display: none;
             }
@@ -12,197 +14,57 @@
     }
 
     .wrapper {
-        margin: 0 20px !important;
-        // max-width: 300px !important;
-    }
+        max-width: 300px;
+        margin: 0 auto;
 
-    h2 {
-        font-size: 30px !important;
-    }
-
-    .contacts {
-        &__container {
-            // max-width: 600px;
-            flex-direction: column;
-            margin: 0 auto;
-            align-items: center;
-            width: 100%;
+        h2 {
+            font-size: 30px;
         }
 
-        iframe {
-            height: 250px;
-            width: 100%;
-            margin-right: 0;
-            margin-bottom: 30px;
-        }
+        .quality-windows {
+            &__wrapper {
+                padding-top: 30%;
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: flex-end;
 
-        &__list {
-            align-items: left;
-        }
+                text-align: center;
+            }
 
-        &__office {
-            font-size: 24px;
-        }
+            &__container {}
 
-        &__phone {
-            font-size: 14px;
-            color: rgb(77, 77, 77);
-        }
+            &__content {
+                align-self: center;
+                margin-right: 0;
+                max-width: 278px;
 
-        &__adress {
-            font-size: 18px;
-        }
+            }
 
-    }
+            &__img {
+                width: 259px;
+                margin: 0 auto 20px;
+            }
 
-    .profiles {
-        
-        &__list {
-            margin: 0 auto;
-            max-width: 300px;
-            align-items: center;
-            grid-template-columns: 1fr;
-        }
+            &__title {
+                font-size: 25px;
+                line-height: 1.2;
 
-        &__elem {
-            width: 300px; ////
-        }
+                width: 280px;
 
-        &__content {
-            display: flex;
-            flex-direction: row-reverse; ////
-            justify-content: space-around;
-            margin-top: 24px;
-            margin-bottom: 24px;
-        }
+            }
 
-        &__brand-price {
-            display: flex; ////
-            align-items: center; ////
-            justify-content: center;
+            &__subtitle {
+                font-size: 15px;
+                line-height: 1.4;
 
-            margin-bottom: 25px;
-        }
+                margin-bottom: 20px;
+            }
 
-        &__mobile-content {
-            display: flex; ////
-            justify-content: center; ////
-            align-items: center; ////
-        }
-
-        &__price-content {}
-
-        &__subtitle {
-            width: 216px; ////
-        }
-
-        &__text {
-            display: none; ////
-        }
-
-        &__title {
-            font-size: 22px; ////
-            line-height: 24px; ////
-
-            &_margin {
-                margin-right: 12px; ////
+            &__button {
+                width: 100%;
             }
         }
 
-        &__price-field {
-            padding: 8px 5px 10px 5px; ////
-        }
-
-        &__indicator-list {
-            padding-bottom: 0; ////
-
-            img {
-                margin-top: auto;
-                margin-bottom: auto;
-            }
-        }
-
-        &__indicator-list {
-            display: flex; //// 
-            flex-direction: column; /////
-            justify-content: space-between; ////
-        }
-
-        &__indicator-elem {
-            display: flex;
-            margin-bottom: 12px;
-            justify-content: center; ////
-            width: 100%;
-
-            &::before {
-                content: "\2022";
-                color: $primary-color;
-                font-weight: bold;
-                width: 4px;
-                margin-right: 10px;
-                /* Add content: \2022 is the CSS Code/unicode for a bullet */
-            }
-        }
-
-        &__indicator-img {
-            width: 22px;
-            height: 22px;
-
-            display: none; ////
-        }
-
-        &__subtitle_margin {
-            margin-right: 0px; ////
-            width: 200px; ////
-        }
-
-        &__indicator-img_margin {
-            margin-right: 11px;
-
-            display: none; ////
-        }
-
-        &__indicator-blank {
-            display: none; ////
-        }
-
-        &__indicator-filled {
-            display: none; ////
-        }
-
-        &__button {
-            width: 100%;
-            text-align: center; ////
-            padding-bottom: 32px;
-
-            button {
-                font-style: normal;
-                font-weight: 600;
-                font-size: 18px;
-                line-height: 24px;
-                color: $primary-color;
-                border: 1px solid $primary-color;
-                border-radius: 32px;
-                background: white;
-                padding: 14px 20px; ////
-
-                &:hover {
-                    color: white;
-                    background: $primary-color;
-                    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-                }
-            }
-
-        }
-    }
-
-    //+
-    //+
-    //+
-    //+
-    //+
-
-    .wrapper {
         .popup {
             width: 100%;
             padding: 60px 20px;
@@ -213,13 +75,146 @@
             }
         }
 
-        //+
-        .popup.active {
-            transform: translate(-50%, -80%);
-            transition: 0.5s all;
+        .profiles {
+            &__list {
+                margin: 0 auto;
+                // max-width: 300px;
+                align-items: center;
+                grid-template-columns: 1fr;
+            }
+
+            &__elem {
+                // width: 300px; ////
+            }
+
+            &__content {
+                display: flex;
+                flex-direction: row-reverse; ////
+                justify-content: space-around;
+                margin-top: 24px;
+                margin-bottom: 24px;
+            }
+
+            &__brand-price {
+                display: flex; ////
+                align-items: center; ////
+                justify-content: center;
+
+                margin-bottom: 25px;
+            }
+
+            &__mobile-content {
+                display: flex; ////
+                justify-content: center; ////
+                align-items: center; ////
+            }
+
+            &__price-content {}
+
+            &__subtitle {
+                width: 216px; ////
+            }
+
+            &__text {
+                display: none; ////
+            }
+
+            &__title {
+                font-size: 22px; ////
+                line-height: 24px; ////
+
+                &_margin {
+                    margin-right: 12px; ////
+                }
+            }
+
+            &__price-field {
+                padding: 8px 5px 10px 5px; ////
+            }
+
+            &__indicator-list {
+                padding-bottom: 0; ////
+
+                img {
+                    margin-top: auto;
+                    margin-bottom: auto;
+                }
+            }
+
+            &__indicator-list {
+                display: flex; //// 
+                flex-direction: column; /////
+                justify-content: space-between; ////
+            }
+
+            &__indicator-elem {
+                display: flex;
+                margin-bottom: 12px;
+                justify-content: center; ////
+                width: 100%;
+
+                &::before {
+                    content: "\2022";
+                    color: $primary-color;
+                    font-weight: bold;
+                    width: 4px;
+                    margin-right: 10px;
+                    /* Add content: \2022 is the CSS Code/unicode for a bullet */
+                }
+            }
+
+            &__indicator-img {
+                width: 22px;
+                height: 22px;
+
+                display: none; ////
+            }
+
+            &__subtitle_margin {
+                margin-right: 0px; ////
+                width: 200px; ////
+            }
+
+            &__indicator-img_margin {
+                margin-right: 11px;
+
+                display: none; ////
+            }
+
+            &__indicator-blank {
+                display: none; ////
+            }
+
+            &__indicator-filled {
+                display: none; ////
+            }
+
+            &__button {
+                width: 100%;
+                text-align: center; ////
+                padding-bottom: 32px;
+
+                button {
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: $primary-color;
+                    border: 1px solid $primary-color;
+                    border-radius: 32px;
+                    background: white;
+                    padding: 14px 20px; ////
+
+                    &:hover {
+                        color: white;
+                        background: $primary-color;
+                        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+                    }
+                }
+
+            }
         }
 
-        //+
         .installment {
             &__subtitles-list {
                 display: flex;
@@ -232,7 +227,7 @@
                 margin: 0;
                 font-size: 22px;
                 line-height: 1.3;
-                width: 286px;
+                // width: 286px;
             }
 
             &__title {
@@ -248,7 +243,6 @@
             &__inputs-list {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
             }
 
             &__input-elem {
@@ -264,7 +258,17 @@
 
         }
 
-        //+
+        .advantages {
+            &__elem {
+                // max-width: 300px;
+                // margin: 0 auto;
+            }
+
+            &__more-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .measurement {
             &__subtitles-list {
                 display: flex;
@@ -317,15 +321,74 @@
                 text-align: center;
                 width: 280px;
                 margin: 0 auto;
+
+                &-margin {
+                    margin-left: 0;
+                }
             }
 
         }
 
-        //+
-        .quality-windows {
-            padding-top: 50px !important;
+        .contacts {
+            &__container {
+                // max-width: 600px;
+                flex-direction: column;
+                margin: 0 auto;
+                align-items: center;
 
+                iframe {
+                    height: 300px;
+                    width: 100%;
+                    margin-right: 0;
+                    padding-bottom: 30px;
+                }
+            }
+
+
+
+            &__list {
+                align-items: left;
+            }
+
+            &__office {
+                font-size: 24px;
+            }
+
+            &__phone {
+                font-size: 14px;
+                color: rgb(77, 77, 77);
+            }
+
+            &__adress {
+                font-size: 18px;
+            }
+
+        }
+    }
+}
+
+@media (min-width: 480px) and (max-width: 639px) {
+    .header {
+        &__wrapper {
+            margin: 25px 20px;
+
+            .header__navigation {
+                display: none;
+            }
+
+            .header__burger {
+                display: block;
+            }
+        }
+    }
+
+    .wrapper {
+        max-width: 460px;
+        margin: 0 auto;
+
+        .quality-windows {
             &__wrapper {
+                padding-top: 20%;
                 display: flex;
                 flex-direction: column-reverse;
                 justify-content: flex-end;
@@ -338,7 +401,7 @@
             &__content {
                 align-self: center;
                 margin-right: 0;
-                max-width: 278px;
+                max-width: 100%;
 
             }
 
@@ -348,104 +411,77 @@
             }
 
             &__title {
-                font-size: 25px;
+                font-size: 36px;
                 line-height: 1.2;
-
-                width: 280px;
+                width: 100%;
+                // width: 280px;
+                // width: 440px;
 
             }
 
             &__subtitle {
-                font-size: 15px;
+                font-size: 20px;
                 line-height: 1.4;
+                width: 100%;
 
                 margin-bottom: 20px;
+                // max-width: 310px;
             }
 
             &__button {
-                width: 259px;
+                width: 70%;
             }
         }
-
-        .advantages {
-            &__elem {
-                max-width: 300px;
-                margin: 0 auto;
-            }
-
-            &__more-list {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        //+
-    }
-}
-
-@media (min-width: 480px) and (max-width: 639px) {
-    .header {
-        .wrapper {
-            .header__navigation {
-                display: none;
-            }
-
-            .header__burger {
-                display: block;
-            }
-        }
-    }
-
-    //+
-    .mobile {
-        display: none;
-    }
-
-    .profiles {
-        &__list {
-            width: 460px;
-            grid-template-columns: 1fr;
-
-            margin: 0 auto;
-        }
-
-        &__elem {
-            // margin: auto;
-        }
-
-        &__wrapper {
-            margin: 30px;
-        }
-
-        &__content {
-            margin-bottom: 32px;
-        }
-
-        &__price-field {
-            font-size: 24px;
-            padding: 8px 16px 10px 16px;
-        }
-
-        &__indicator-list {
-            padding-bottom: 18px;
-        }
-
-        &__button {
-            text-align: right;
-        }
-    }
-
-    .wrapper {
-        margin: 0 20px !important;
-        // max-width: 460px !important;
 
         .popup {
             width: 100%;
             padding: 60px 20px;
+
+            &__close {
+                right: 30px;
+                top: 10px;
+            }
         }
 
-        .popup.active {
-            transform: translate(-50%, -100%);
-            transition: 0.5s all;
+        .mobile {
+            display: none;
+        }
+
+        .profiles {
+            &__list {
+                grid-template-columns: 1fr;
+            }
+
+            &__elem {
+                // margin: auto;
+            }
+
+            &__wrapper {
+                margin: 30px;
+            }
+
+            &__content {
+                margin-bottom: 32px;
+            }
+
+            &__price-field {
+                font-size: 24px;
+                padding: 8px 16px 10px 16px;
+            }
+
+            &__indicator-list {
+                padding-bottom: 18px;
+            }
+
+            &__button {
+                text-align: right;
+            }
+        }
+
+        .configuration {
+            &__list {
+                grid-template-columns: 1fr;
+            }
         }
 
         .installment {
@@ -480,7 +516,7 @@
             &__inputs-list {
                 display: flex;
                 flex-direction: column;
-                // align-items: center;
+                text-align: center;
             }
 
             &__input-elem {
@@ -494,7 +530,11 @@
                 margin: 0 auto;
             }
 
+            &__button {
+                width: 70%;
+            }
         }
+
         // +
 
         .measurement {
@@ -504,7 +544,7 @@
             }
 
             &__input {
-                width: 80%;
+                width: 90%;
             }
 
             &__subtitle-elem {
@@ -556,40 +596,87 @@
                 margin: 0 auto;
             }
 
-        }
-        // +
-
-        .configuration {
-            margin: 0 auto;
-            width: 460px;
-            &__list{
-                grid-template-columns: 1fr;
+            &__button {
+                width: 70%;
             }
-            
+        }
+
+        .contacts {
             &__container {
-            }
-        }
-
-        .advantages {
-            &__elem {
-                max-width: 445px;
+                // max-width: 600px;
+                flex-direction: column;
                 margin: 0 auto;
+                align-items: left;
+
+                iframe {
+                    height: 400px;
+                    width: 100%;
+                    margin-right: 0;
+                    padding-bottom: 30px;
+                }
             }
 
-            &__more-list {
-                grid-template-columns: 1fr;
+
+
+            &__list {
+                align-items: left;
+            }
+
+            &__office {
+                font-size: 24px;
+            }
+
+            &__phone {
+                font-size: 14px;
+                color: rgb(77, 77, 77);
+            }
+
+            &__adress {
+                font-size: 18px;
+            }
+
+        }
+    }
+}
+
+@media (min-width: 640px) and (max-width: 959px) {
+    .header {
+        &__wrapper {
+            margin: 25px 20px;
+
+            .header__navigation {
+                display: none;
+            }
+
+            .header__burger {
+                display: block;
             }
         }
-        // +
+    }
+
+    .wrapper {
+        max-width: 624px;
+        margin: 0 auto;
+
+        .popup {
+            width: 370px;
+            padding: 60px 45px;
+        }
+
+        .popup.active {
+            transform: translate(-50%, -100%);
+            transition: 0.5s all;
+        }
 
         .quality-windows {
             &__wrapper {
-                margin-top: 50px;
                 display: flex;
                 flex-direction: column-reverse;
                 justify-content: flex-end;
 
                 text-align: center;
+
+                padding-top: 15%;
             }
 
             &__container {}
@@ -601,7 +688,7 @@
             }
 
             &__img {
-                width: 259px;
+                width: 335px;
                 margin: 0 auto 20px;
             }
 
@@ -610,6 +697,7 @@
                 line-height: 1.2;
 
                 width: 100%;
+
             }
 
             &__subtitle {
@@ -623,296 +711,149 @@
                 width: 259px;
             }
         }
-        // +
-    }
 
-    .contacts {
-        &__container {
-            // max-width: 600px;
-            flex-direction: column;
-            margin: 0 auto;
-            align-items: center;
-            width: 100%;
-        }
-
-        iframe {
-            height: 250px;
-            width: 100%;
-            margin-right: 0;
-            margin-bottom: 30px;
-        }
-
-        &__list {
-            align-items: left;
-        }
-
-        &__office {
-            font-size: 24px;
-        }
-
-        &__phone {
-            font-size: 14px;
-            color: rgb(77, 77, 77);
-        }
-
-        &__adress {
-            font-size: 18px;
-        }
-
-    }
-}
-
-@media (min-width: 640px) and (max-width: 959px) {
-    .header {
-        .wrapper {
-            .header__navigation {
-                display: none;
+        .profiles {
+            &__list {
+                grid-template-columns: 1fr 1fr;
             }
 
-            .header__burger {
-                display: block;
+            &__elem {
+                // width: 300px; ////
             }
-        }
-    }
 
-    .profiles {
-        
-        &__list {
-            max-width: 624px;
-            grid-template-columns: 1fr 1fr;
-            margin: 0 auto;
-        }
-
-        &__elem {
-            width: 300px; ////
-        }
-
-        &__content {
-            display: flex;
-            flex-direction: row-reverse; ////
-            justify-content: space-around;
-            margin-top: 24px;
-            margin-bottom: 24px;
-        }
-
-        &__brand-price {
-            display: flex; ////
-            align-items: center; ////
-            justify-content: center;
-
-            margin-bottom: 25px;
-        }
-
-        &__mobile-content {
-            display: flex; ////
-            justify-content: center; ////
-            align-items: center; ////
-        }
-
-        &__price-content {}
-
-        &__subtitle {
-            width: 216px; ////
-        }
-
-        &__text {
-            display: none; ////
-        }
-
-        &__title {
-            font-size: 22px; ////
-            line-height: 24px; ////
-
-            &_margin {
-                margin-right: 12px; ////
+            &__content {
+                display: flex;
+                flex-direction: row-reverse; ////
+                justify-content: space-around;
+                margin-top: 24px;
+                margin-bottom: 24px;
             }
-        }
 
-        &__price-field {
-            padding: 8px 5px 10px 5px; ////
-        }
+            &__brand-price {
+                display: flex; ////
+                align-items: center; ////
+                justify-content: center;
 
-        &__indicator-list {
-            padding-bottom: 0; ////
-
-            img {
-                margin-top: auto;
-                margin-bottom: auto;
+                margin-bottom: 25px;
             }
-        }
 
-        &__indicator-list {
-            display: flex; //// 
-            flex-direction: column; /////
-            justify-content: space-between; ////
-        }
-
-        &__indicator-elem {
-            display: flex;
-            margin-bottom: 12px;
-            justify-content: center; ////
-            width: 100%;
-
-            &::before {
-                content: "\2022";
-                color: $primary-color;
-                font-weight: bold;
-                width: 4px;
-                margin-right: 10px;
-                /* Add content: \2022 is the CSS Code/unicode for a bullet */
+            &__mobile-content {
+                display: flex; ////
+                justify-content: center; ////
+                align-items: center; ////
             }
-        }
 
-        &__indicator-img {
-            width: 22px;
-            height: 22px;
+            &__price-content {}
 
-            display: none; ////
-        }
+            &__subtitle {
+                width: 216px; ////
+            }
 
-        &__subtitle_margin {
-            margin-right: 0px; ////
-            width: 200px; ////
-        }
+            &__text {
+                display: none; ////
+            }
 
-        &__indicator-img_margin {
-            margin-right: 11px;
+            &__title {
+                font-size: 22px; ////
+                line-height: 24px; ////
 
-            display: none; ////
-        }
-
-        &__indicator-blank {
-            display: none; ////
-        }
-
-        &__indicator-filled {
-            display: none; ////
-        }
-
-        &__button {
-            width: 100%;
-            text-align: center; ////
-            padding-bottom: 32px;
-
-            button {
-                font-style: normal;
-                font-weight: 600;
-                font-size: 18px;
-                line-height: 24px;
-                color: $primary-color;
-                border: 1px solid $primary-color;
-                border-radius: 32px;
-                background: white;
-                padding: 14px 20px; ////
-
-                &:hover {
-                    color: white;
-                    background: $primary-color;
-                    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+                &_margin {
+                    margin-right: 12px; ////
                 }
             }
 
-        }
-    }
-    .slider{
-        max-width: 100%;
-    }
-    .review {
-        margin: 0 auto;
-        width: 628px;
+            &__price-field {
+                padding: 8px 5px 10px 5px; ////
+            }
 
-        &__container {
-            width: 300px;
-        }
+            &__indicator-list {
+                padding-bottom: 0; ////
 
-        &__customer-content {}
+                img {
+                    margin-top: auto;
+                    margin-bottom: auto;
+                }
+            }
 
-        &__customer-text {
-            width: 182px;
-        }
-    }
+            &__indicator-list {
+                display: flex; //// 
+                flex-direction: column; /////
+                justify-content: space-between; ////
+            }
 
-    .advantages {
-        &__more-list {
-            grid-template-columns: 1fr;
-            justify-content: center;
-        }
-        &__more-elem{
-        }
-        
-        &__wrapper {
-            max-width: 600px !important;
-            margin: 0 auto !important;
-        }
-        
-        &__list {
-            grid-template-columns: 1fr;
-            // width: 600px;
-        }
+            &__indicator-elem {
+                display: flex;
+                margin-bottom: 12px;
+                justify-content: center; ////
+                width: 100%;
 
-        &__elem {
-        }
+                &::before {
+                    content: "\2022";
+                    color: $primary-color;
+                    font-weight: bold;
+                    width: 4px;
+                    margin-right: 10px;
+                    /* Add content: \2022 is the CSS Code/unicode for a bullet */
+                }
+            }
 
-        &__subtitle {
-            max-width: 600px;
-        }
-    }
+            &__indicator-img {
+                width: 22px;
+                height: 22px;
 
-    .configuration {
-        &__list {
-            grid-template-columns: 1fr 1fr;
-            max-width: 624px;
-            margin: 0 auto;
-        }
-        
-        &__wrapper {
-        }
+                display: none; ////
+            }
 
-        &__container {
-            width: 298px;
-        }
-    }
+            &__subtitle_margin {
+                margin-right: 0px; ////
+                width: 200px; ////
+            }
 
-    .contacts {
-        &__wrapper{
-            width: 550px;
-            margin: 0 auto;
-        }
-        &__container {
-            flex-direction: column;
-            margin: 0 auto;
-            align-items: center;
-            width: 100%;
-        }
+            &__indicator-img_margin {
+                margin-right: 11px;
 
-        iframe {
-            height: 550px;
-            width: 100%;
-            margin-right: 0;
-            margin-bottom: 30px;
-        }
+                display: none; ////
+            }
 
-        &__list {
-            align-items: left;
-        }
+            &__indicator-blank {
+                display: none; ////
+            }
 
-        &__office {
-            font-size: 24px;
-        }
+            &__indicator-filled {
+                display: none; ////
+            }
 
-        &__phone {
-            font-size: 14px;
-            color: rgb(77, 77, 77);
+            &__button {
+                width: 100%;
+                text-align: center; ////
+                padding-bottom: 32px;
+
+                button {
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: $primary-color;
+                    border: 1px solid $primary-color;
+                    border-radius: 32px;
+                    background: white;
+                    padding: 14px 20px; ////
+
+                    &:hover {
+                        color: white;
+                        background: $primary-color;
+                        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+                    }
+                }
+
+            }
         }
 
-        &__adress {
-            font-size: 18px;
+        .configuration {
+            &__list {
+                grid-template-columns: 1fr 1fr;
+            }
         }
-
-    }
-
-    .wrapper {
-        // margin: 0 20px !important;
 
         .installment {
             &__subtitles-list {
@@ -970,10 +911,43 @@
 
         }
 
+        .advantages {
+            &__more-list {
+                grid-template-columns: 1fr;
+                justify-content: center;
+            }
+
+            &__more-elem {}
+
+            &__list {
+                grid-template-columns: 1fr;
+            }
+
+            &__elem {}
+
+            &__subtitle {
+                max-width: 600px;
+            }
+        }
+
+        .review {
+            &__container {
+                width: 300px;
+            }
+
+            &__customer-text {
+                width: 182px;
+            }
+        }
+
         .measurement {
             &__subtitles-list {
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
+            }
+
+            &__input {
+                width: 60%;
             }
 
             &__subtitle-elem {
@@ -984,12 +958,12 @@
             }
 
             &__subtitle-numbers {
-                font-size: 64px;
+                font-size: 96px;
                 font-weight: 700;
                 line-height: 1.1;
 
                 span {
-                    font-size: 32px;
+                    font-size: 48px;
                 }
             }
 
@@ -999,7 +973,7 @@
 
             &__title {
                 font-style: normal;
-                font-size: 42px;
+                font-size: 64px;
                 line-height: 70px;
 
                 text-align: center;
@@ -1010,165 +984,80 @@
             &__inputs-list {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                // align-items: center;
             }
 
             &__input-elem {
                 margin-right: 0;
                 padding-bottom: 20px;
-
-                width: 419px;
-
-                button {
-                    width: 100%;
-                }
-
-                input {
-                    width: 100%;
-                }
+                text-align: center;
             }
 
             &__policy {
                 text-align: center;
-                width: 419px;
+                // width: 280px;
                 margin: 0 auto;
-            }
 
-        }
-
-        .quality-windows {
-            &__wrapper {
-                display: flex;
-                flex-direction: column-reverse;
-                justify-content: flex-end;
-
-                text-align: center;
-            }
-
-            &__container {}
-
-            &__content {
-                align-self: center;
-                max-width: 400px;
-                margin-right: 0;
-            }
-
-            &__img {
-                width: 335px;
-                margin: 0 auto 20px;
-            }
-
-            &__title {
-                font-size: 36px;
-                line-height: 1.2;
-
-                width: 100%;
-
-            }
-
-            &__subtitle {
-                font-size: 20px;
-                line-height: 1.4;
-
-                margin-bottom: 20px;
+                &-margin {
+                    margin-left: 0;
+                }
             }
 
             &__button {
-                width: 259px;
+                width: 50%;
             }
+        }
+
+        .contacts {
+            &__container {
+                // max-width: 600px;
+                flex-direction: column;
+                margin: 0 auto;
+                align-items: left;
+
+                iframe {
+                    height: 250px;
+                    width: 100%;
+                    margin-right: 0;
+                    padding-bottom: 30px;
+                }
+            }
+
+            &__list {
+                align-items: left;
+            }
+
+            &__office {
+                font-size: 24px;
+            }
+
+            &__phone {
+                font-size: 14px;
+                color: rgb(77, 77, 77);
+            }
+
+            &__adress {
+                font-size: 18px;
+            }
+
         }
     }
 }
 
 @media (min-width: 960px) and (max-width: 1199px) {
+    .header {
+        &__wrapper {
+            margin: 10px 20px;
+        }
+    }
+
     .mobile {
         display: none;
     }
 
-    .advantages {
-        &__more-list {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-
-    .profiles {
-        &__list {
-            width: 944px;
-            grid-template-columns: 1fr 1fr;
-
-            margin: 0 auto;
-        }
-
-        &__elem {
-            // margin: auto;
-        }
-
-        &__wrapper {
-            margin: 30px;
-        }
-
-        &__content {
-            margin-bottom: 32px;
-        }
-
-        &__price-field {
-            font-size: 24px;
-            padding: 8px 16px 10px 16px;
-        }
-
-        &__indicator-list {
-            padding-bottom: 18px;
-        }
-
-        &__button {
-            text-align: right;
-        }
-    }
-
-    .review {
-        max-width: 944px;
-
-        &__container {
-            width: 460px;
-        }
-
-        &__customer-content {}
-
-        &__customer-text {
-            width: 342px;
-        }
-    }
-
     .wrapper {
-        margin: 0 20px !important;
-
-        .configuration {
-            &__list {
-                width: 940px;
-                grid-template-columns: 1fr 1fr;
-                margin: 0 auto;
-            }
-
-            &__container {
-                width: 458px;
-            }
-            &__wrapper{
-            }
-        }
-
-        .advantages {
-            &__more-list {
-                justify-content: center;
-            }
-
-            &__list {
-                display: flex;
-            }
-
-            &__elem {
-                max-width: 300px;
-            }
-        }
+        max-width: 944px;
+        margin: 0 auto;
 
         .quality-windows {
             &__img {
@@ -1176,18 +1065,126 @@
                 margin: 0;
                 // margin: 0 auto 20px;
             }
-            &__wrapper{
-                justify-content: center;
+
+            &__wrapper {
+                justify-content: space-between;
+
+                padding-top: 15%;
             }
-            &__content{
+
+            &__content {
                 margin-right: 0;
+                width: 450px;
+            }
+
+            &__title {
+                font-size: 42px;
+            }
+
+            &__subtitle {
+                font-size: 20px;
             }
         }
-        .measurement{
-            &__content{
-                // width: 850px;
-                margin: 0 auto;
+
+        .profiles {
+            &__list {
+                grid-template-columns: 1fr 1fr;
             }
+
+            &__elem {
+                // margin: auto;
+            }
+
+            &__wrapper {
+                margin: 30px;
+            }
+
+            &__content {
+                margin-bottom: 32px;
+            }
+
+            &__price-field {
+                font-size: 24px;
+                padding: 8px 16px 10px 16px;
+            }
+
+            &__indicator-list {
+                padding-bottom: 18px;
+            }
+
+            &__button {
+                text-align: right;
+            }
+        }
+
+        .configuration {
+            &__list {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+        .advantages {
+            &__list {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            &__more-list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .review {
+            &__container {
+                width: 460px;
+            }
+
+            &__customer-content {}
+
+            &__customer-text {
+                width: 342px;
+            }
+        }
+
+        .measurement {
+            &__subtitle-numbers {
+                line-height: normal;
+            }
+        }
+
+        .contacts {
+            &__container {
+                // max-width: 600px;
+                // flex-direction: row;
+                margin: 0 auto;
+                align-items: center;
+                justify-content: space-between;
+
+                iframe {
+                    height: 550px;
+                    width: 550px;
+                    margin-right: 0;
+                    padding-bottom: 30px;
+                }
+            }
+
+            &__list {
+                align-items: left;
+            }
+
+            &__office {
+                font-size: 24px;
+            }
+
+            &__phone {
+                font-size: 14px;
+                color: rgb(77, 77, 77);
+            }
+
+            &__adress {
+                font-size: 18px;
+            }
+
         }
     }
 }
@@ -1197,29 +1194,157 @@
         display: none;
     }
 
-    .advantages {
-        &__more-list {
-            grid-template-columns: 1fr 1fr;
+    .header {
+        &__wrapper {
+            margin: 0 auto;
+            padding: 10px 20px;
+            max-width: 1158px;
         }
     }
 
-    .review {
-        max-width: 1158px;
-
-        &__container {
-            max-width: 370px;
-        }
-
-        &__customer-text {
-            max-width: 252px;
-        }
+    .profiles {
+        // специально для 1200+ заголовка profiles, он меньше wrapper
+        width: 960px;
     }
 
     .wrapper {
+        max-width: 1158px;
+        margin: 0 auto;
+
         .advantages {
             &__more-list {
-                justify-content: center;
+                grid-template-columns: 1fr 1fr;
             }
+        }
+
+        .review {
+
+            &__container {
+                max-width: 370px;
+            }
+
+            &__customer-text {
+                max-width: 252px;
+            }
+        }
+
+        .quality-windows {
+            &__img {
+                width: 560px;
+                margin: 0;
+            }
+
+            &__wrapper {
+                justify-content: space-between;
+                padding-top: 10%;
+            }
+
+            &__content {
+                margin-right: 0;
+                width: 450px;
+            }
+
+            &__title {
+                font-size: 46px;
+            }
+
+            &__subtitle {
+                font-size: 20px;
+            }
+        }
+
+        .profiles {
+            width: 960px;
+            &__list {
+                max-width: 960px;
+                margin: 0 auto;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            &__elem {
+                max-width: 460px;
+            }
+
+            &__wrapper {
+                margin: 30px;
+            }
+
+            &__content {
+                margin-bottom: 32px;
+            }
+
+            &__price-field {
+                font-size: 24px;
+                padding: 8px 16px 10px 16px;
+            }
+
+            &__indicator-list {
+                padding-bottom: 18px;
+            }
+
+            &__button {
+                text-align: right;
+            }
+        }
+
+        ////
+
+        .configuration {
+            &__list {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+        }
+
+        .advantages {
+            &__list {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            &__more-list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .measurement {
+            &__input-elem {
+                width: 24%;
+            }
+        }
+
+        .contacts {
+            &__container {
+                // max-width: 600px;
+                // flex-direction: row;
+                margin: 0 auto;
+                align-items: center;
+                justify-content: space-between;
+
+                iframe {
+                    width: 710px;
+                    height: 550px;
+                    margin-right: 0;
+                    padding-bottom: 30px;
+                }
+            }
+
+            &__list {
+                align-items: left;
+            }
+
+            &__office {
+                font-size: 24px;
+            }
+
+            &__phone {
+                font-size: 14px;
+                color: rgb(77, 77, 77);
+            }
+
+            &__adress {
+                font-size: 18px;
+            }
+
         }
     }
 }

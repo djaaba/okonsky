@@ -16,8 +16,6 @@ $('.slider').slick({
     touchThreshold: 6,
     waitForAnimate: false,
     dots: true,
-    // centerMode: true,
-    // variableWidth: true,
     mobileFirst: true,
     responsive: [
         {
@@ -107,8 +105,9 @@ function bodyLock() {
     body.classList.add('lock');
     body.style.width = window.innerWidth - scrollWidth;
     if (scrollWidth){
-        body.style.paddingRight = 17 + 'px';
-        document.querySelector('.wrapper').style.paddingRight = scrollWidth + 'px';
+        body.style.paddingRight = scrollWidth + 'px';
+        document.querySelector('.header__wrapper').style.paddingRight = 20 + scrollWidth + 'px';
+        // document.querySelector('.wrapper').style.paddingRight = scrollWidth + 'px';
         document.querySelector('.burger').style.right = 10 + scrollWidth + 'px';
     }
     unlock = false;
@@ -119,12 +118,13 @@ function bodyLock() {
 
 function bodyUnlock() {
     body.style.width = window.innerWidth - scrollWidth;
+    body.classList.remove('lock');
     if (scrollWidth){
         body.style.paddingRight = 0 + 'px';
-        document.querySelector('.wrapper').style.paddingRight = 0 + 'px';
+        document.querySelector('.header__wrapper').style.paddingRight = 20 + 'px';
+        // document.querySelector('.wrapper').style.paddingRight = 0 + 'px';
         document.querySelector('.burger').style.right = 10 + 'px';
     }
-    body.classList.remove('lock');
     unlock = false;
     setTimeout(function () {
         unlock = true;

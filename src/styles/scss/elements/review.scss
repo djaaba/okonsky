@@ -17,7 +17,7 @@
     }
     &__header{
         color: #21282E;
-        padding: 20px 0 21.5px 30px;
+        margin: 20px 0 21.5px 30px;
 
         font-style: normal;
         font-weight: bold;
@@ -32,15 +32,14 @@
     &__main{
         display: flex;
         justify-content: space-between;
-        padding: 24px;
-        margin: 0 auto;
+        margin: 24px;
         img{
             width: 48px;
             height: 48px;
         }
     }
     &__customer-photo{
-        padding-right: 10px;
+        margin-right: 10px;
     }
     &__customer-name{
         font-style: normal;
