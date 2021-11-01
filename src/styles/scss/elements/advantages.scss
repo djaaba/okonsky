@@ -1,18 +1,21 @@
 .advantages{
-    &__list{
-        display: flexbox;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        
-        margin-bottom: 80px;
+    background-color: white;
+    padding-bottom: 50px;
+    &__wrapper{
+        margin: 0 auto; ////
 
     }
+    &__list{
+        // max-width: 1200px; 
+        display: grid;
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+        // grid-template-columns: 1fr 1fr 1fr;
+        
+        margin-bottom: 40px;
+    }
     &__elem{
-        max-width: 360px;
-
-        margin-bottom: 25px;
-        margin-right: auto;
-        margin-left: auto;
+        // width: 360px;
     }
     &__img{
         margin-bottom: 24px;
@@ -43,20 +46,17 @@
     }
     &__more-list{
         display: grid;
-        grid-template-columns: 1fr 1fr;
-
-        width: 100%;
-        margin-right: auto;
-        margin-left: auto;
+        grid-column-gap: 40px;
+        grid-row-gap: 28px;
+        // max-width: 1150px;
     }
     &__more-elem{
         display: flex;
-        margin-bottom: 28px;
-        padding: 0 20px 0 20px;
+        align-items: center;
         img{
-            margin-right: 26px;
-            width: 45px;
-            height: 45px;
+            margin-right: 20px;
+            width: 35px;
+            height: 35px;
         }
     }
     a{

@@ -1,7 +1,5 @@
 @media (min-width: 320px) and (max-width: 479px) {
     .header {
-        height: 4vh !important;
-
         .wrapper {
             .header__navigation {
                 display: none;
@@ -14,20 +12,214 @@
     }
 
     .wrapper {
-        .popup {
-            width: 280px;
-            padding: 60px 20px;
+        margin: 0 20px !important;
+        // max-width: 300px !important;
+    }
+
+    h2 {
+        font-size: 30px !important;
+    }
+
+    .contacts {
+        &__container {
+            // max-width: 600px;
+            flex-direction: column;
+            margin: 0 auto;
+            align-items: center;
+            width: 100%;
         }
 
+        iframe {
+            height: 250px;
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+
+        &__list {
+            align-items: left;
+        }
+
+        &__office {
+            font-size: 24px;
+        }
+
+        &__phone {
+            font-size: 14px;
+            color: rgb(77, 77, 77);
+        }
+
+        &__adress {
+            font-size: 18px;
+        }
+
+    }
+
+    .profiles {
+        
+        &__list {
+            margin: 0 auto;
+            max-width: 300px;
+            align-items: center;
+            grid-template-columns: 1fr;
+        }
+
+        &__elem {
+            width: 300px; ////
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: row-reverse; ////
+            justify-content: space-around;
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+
+        &__brand-price {
+            display: flex; ////
+            align-items: center; ////
+            justify-content: center;
+
+            margin-bottom: 25px;
+        }
+
+        &__mobile-content {
+            display: flex; ////
+            justify-content: center; ////
+            align-items: center; ////
+        }
+
+        &__price-content {}
+
+        &__subtitle {
+            width: 216px; ////
+        }
+
+        &__text {
+            display: none; ////
+        }
+
+        &__title {
+            font-size: 22px; ////
+            line-height: 24px; ////
+
+            &_margin {
+                margin-right: 12px; ////
+            }
+        }
+
+        &__price-field {
+            padding: 8px 5px 10px 5px; ////
+        }
+
+        &__indicator-list {
+            padding-bottom: 0; ////
+
+            img {
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+        }
+
+        &__indicator-list {
+            display: flex; //// 
+            flex-direction: column; /////
+            justify-content: space-between; ////
+        }
+
+        &__indicator-elem {
+            display: flex;
+            margin-bottom: 12px;
+            justify-content: center; ////
+            width: 100%;
+
+            &::before {
+                content: "\2022";
+                color: $primary-color;
+                font-weight: bold;
+                width: 4px;
+                margin-right: 10px;
+                /* Add content: \2022 is the CSS Code/unicode for a bullet */
+            }
+        }
+
+        &__indicator-img {
+            width: 22px;
+            height: 22px;
+
+            display: none; ////
+        }
+
+        &__subtitle_margin {
+            margin-right: 0px; ////
+            width: 200px; ////
+        }
+
+        &__indicator-img_margin {
+            margin-right: 11px;
+
+            display: none; ////
+        }
+
+        &__indicator-blank {
+            display: none; ////
+        }
+
+        &__indicator-filled {
+            display: none; ////
+        }
+
+        &__button {
+            width: 100%;
+            text-align: center; ////
+            padding-bottom: 32px;
+
+            button {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 24px;
+                color: $primary-color;
+                border: 1px solid $primary-color;
+                border-radius: 32px;
+                background: white;
+                padding: 14px 20px; ////
+
+                &:hover {
+                    color: white;
+                    background: $primary-color;
+                    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+                }
+            }
+
+        }
+    }
+
+    //+
+    //+
+    //+
+    //+
+    //+
+
+    .wrapper {
+        .popup {
+            width: 100%;
+            padding: 60px 20px;
+
+            &__close {
+                right: 30px;
+                top: 10px;
+            }
+        }
+
+        //+
         .popup.active {
             transform: translate(-50%, -80%);
             transition: 0.5s all;
         }
 
-        h2 {
-            font-size: 30px;
-        }
-
+        //+
         .installment {
             &__subtitles-list {
                 display: flex;
@@ -72,6 +264,7 @@
 
         }
 
+        //+
         .measurement {
             &__subtitles-list {
                 display: flex;
@@ -128,6 +321,7 @@
 
         }
 
+        //+
         .quality-windows {
             padding-top: 50px !important;
 
@@ -173,47 +367,10 @@
             }
         }
 
-        .configuration {
-            grid-template-columns: 1fr;
-
-            &__container {
-                width: 300px;
-            }
-        }
-
-        .contacts {
-            flex-direction: column;
-
-            iframe {
-                margin-right: 0;
-                margin-bottom: 30px;
-                width: 250px;
-                height: 250px;
-            }
-
-            &__list {
-                width: 70%;
-                align-items: left;
-            }
-
-            &__office {
-                font-size: 24px;
-            }
-
-            &__phone {
-                font-size: 14px;
-                color: rgb(77, 77, 77);
-            }
-
-            &__adress {
-                font-size: 18px;
-            }
-
-        }
-
         .advantages {
             &__elem {
                 max-width: 300px;
+                margin: 0 auto;
             }
 
             &__more-list {
@@ -221,232 +378,7 @@
             }
         }
 
-        .profiles {
-            &__list {
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-row-gap: 24px;
-
-                align-items: center;
-                justify-content: center;
-            }
-
-            &__elem {
-                width: 300px; ////
-                background-color: white;
-                border-radius: 12px;
-
-                margin: auto;
-            }
-
-            &__wrapper {
-                width: 100%;
-                margin: 24px;
-                margin: 0 auto;
-            }
-
-            &__content {
-                display: flex;
-                flex-direction: row-reverse; ////
-                justify-content: space-around;
-                padding: 32px 0 0 0 !important;
-
-                margin-bottom: 24px;
-            }
-
-            &__brand-price {
-                display: flex; ////
-                align-items: center; ////
-                justify-content: center;
-
-                margin-bottom: 35px;
-            }
-
-            &__mobile-content {
-                display: flex; ////
-                justify-content: center; ////
-                align-items: center; ////
-            }
-
-            &__price-content {}
-
-            &__subtitle {
-                font-style: normal;
-                font-weight: normal;
-                font-size: 14px;
-                line-height: 19px;
-                color: rgba(0, 0, 0, 0.7);
-
-                width: 216px; ////
-            }
-
-            &__text {
-                max-width: 212px;
-                display: none; ////
-                margin-right: 24px;
-            }
-
-            &__brand-block {
-                display: flex;
-                margin-bottom: 18px;
-            }
-
-            &__brand-img {
-                width: 24px;
-                height: 24px;
-                border-radius: 50%;
-
-                margin: auto 0;
-                margin-right: 12px;
-            }
-
-            &__title {
-                font-style: normal;
-                font-weight: 600;
-                font-size: 22px; ////
-                line-height: 24px; ////
-
-                &_margin {
-                    margin-right: 12px;
-
-                    // display: none; ////
-                }
-            }
-
-            &__price {
-                font-style: normal;
-                font-weight: 600;
-                font-size: 12px;
-                line-height: 15px;
-                color: rgba(0, 0, 0, 0.4);
-
-                padding: 16px 0 8px;
-            }
-
-            &__price-field {
-                font-style: normal;
-                font-weight: bold;
-                font-size: 18px;
-                color: $primary-color;
-                padding: 8px 5px 10px 5px; ////
-                border: 1px solid $primary-color;
-                border-radius: 12px;
-
-                max-width: 155px;
-            }
-
-            &__img {
-                width: 160px;
-                height: 170px;
-            }
-
-            &__indicator-list {
-                padding-bottom: 0; ////
-
-                img {
-                    margin-top: auto;
-                    margin-bottom: auto;
-                }
-            }
-
-            &__indicator-list {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-            }
-
-            &__indicator-elem {
-                display: flex;
-                margin-bottom: 12px;
-                justify-content: center; ////
-                width: 100%;
-
-                &::before {
-                    content: "\2022";
-                    color: $primary-color;
-                    font-weight: bold;
-                    width: 4px;
-                    margin-right: 10px;
-                    /* Add content: \2022 is the CSS Code/unicode for a bullet */
-                }
-            }
-
-            &__indicator-img {
-                width: 22px;
-                height: 22px;
-
-                display: none; ////
-            }
-
-            &__subtitle_margin {
-                margin-right: 0px; ////
-                width: 200px; ////
-            }
-
-            &__indicator-img_margin {
-                margin-right: 11px;
-
-                display: none; ////
-            }
-
-            &__indicator-blank {
-                width: 128px;
-                height: 14px;
-                background: rgba(0, 0, 0, 0.08);
-                border-radius: 7px;
-                margin: auto 0 auto 0;
-
-                display: none; ////
-
-            }
-
-            &__indicator-filled {
-                width: 75%;
-                height: 100%;
-                border-radius: 7px;
-
-                display: none; ////
-
-                &_orange {
-                    background: #F36819;
-                }
-
-                &_green {
-                    background: #4AC120;
-                    width: 30%;
-                }
-
-                &_yellow {
-                    background: #F3B619;
-                    width: 100%;
-                }
-            }
-
-            &__button {
-                width: 100%;
-                text-align: center; ////
-                padding-bottom: 32px;
-
-                button {
-                    font-style: normal;
-                    font-weight: 600;
-                    font-size: 18px;
-                    line-height: 24px;
-                    color: $primary-color;
-                    border: 1px solid $primary-color;
-                    border-radius: 32px;
-                    background: white;
-                    padding: 14px 20px; ////
-
-                    &:hover {
-                        color: white;
-                        background: $primary-color;
-                        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-                    }
-                }
-
-            }
-        }
+        //+
     }
 }
 
@@ -463,12 +395,51 @@
         }
     }
 
+    //+
+    .mobile {
+        display: none;
+    }
+
+    .profiles {
+        &__list {
+            width: 460px;
+            grid-template-columns: 1fr;
+
+            margin: 0 auto;
+        }
+
+        &__elem {
+            // margin: auto;
+        }
+
+        &__wrapper {
+            margin: 30px;
+        }
+
+        &__content {
+            margin-bottom: 32px;
+        }
+
+        &__price-field {
+            font-size: 24px;
+            padding: 8px 16px 10px 16px;
+        }
+
+        &__indicator-list {
+            padding-bottom: 18px;
+        }
+
+        &__button {
+            text-align: right;
+        }
+    }
+
     .wrapper {
-        // margin: 0 20px !important;
-        max-width: 460px !important;
+        margin: 0 20px !important;
+        // max-width: 460px !important;
 
         .popup {
-            width: 350px;
+            width: 100%;
             padding: 60px 20px;
         }
 
@@ -478,23 +449,27 @@
         }
 
         .installment {
+            &__input {
+                width: 90%;
+            }
+
             &__subtitles-list {
                 display: flex;
                 flex-direction: column;
 
-                align-items: center;
+                align-items: left;
             }
 
             &__subtitle-elem {
                 margin: 0;
                 font-size: 22px;
                 line-height: 1.3;
-                width: 286px;
+                // width: 286px;
             }
 
             &__title {
                 font-style: normal;
-                font-size: 42px;
+                font-size: 56px;
                 line-height: 70px;
 
                 text-align: center;
@@ -505,7 +480,7 @@
             &__inputs-list {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                // align-items: center;
             }
 
             &__input-elem {
@@ -515,16 +490,21 @@
 
             &__policy {
                 text-align: center;
-                width: 280px;
+                // width: 280px;
                 margin: 0 auto;
             }
 
         }
+        // +
 
         .measurement {
             &__subtitles-list {
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
+            }
+
+            &__input {
+                width: 80%;
             }
 
             &__subtitle-elem {
@@ -535,12 +515,12 @@
             }
 
             &__subtitle-numbers {
-                font-size: 64px;
+                font-size: 96px;
                 font-weight: 700;
                 line-height: 1.1;
 
                 span {
-                    font-size: 32px;
+                    font-size: 48px;
                 }
             }
 
@@ -550,7 +530,7 @@
 
             &__title {
                 font-style: normal;
-                font-size: 42px;
+                font-size: 64px;
                 line-height: 70px;
 
                 text-align: center;
@@ -561,71 +541,50 @@
             &__inputs-list {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                // align-items: center;
             }
 
             &__input-elem {
                 margin-right: 0;
                 padding-bottom: 20px;
+                text-align: center;
             }
 
             &__policy {
                 text-align: center;
-                width: 280px;
+                // width: 280px;
                 margin: 0 auto;
             }
 
         }
+        // +
 
         .configuration {
-            grid-template-columns: 1fr;
-
+            margin: 0 auto;
+            width: 460px;
+            &__list{
+                grid-template-columns: 1fr;
+            }
+            
             &__container {
-                width: 460px;
-            }
-        }
-
-        .contacts {
-            flex-direction: column;
-
-            iframe {
-                margin-right: 0;
-                margin-bottom: 50px;
-                width: 475px;
-                height: 300px;
-            }
-
-            &__list {
-                width: 70%;
-                align-items: left;
-
             }
         }
 
         .advantages {
             &__elem {
-                max-width: 300px;
+                max-width: 445px;
+                margin: 0 auto;
             }
 
             &__more-list {
-                grid-template-columns: repeat(auto-fill, minmax(555px, 60px));
-                justify-content: center;
-            }
-        }
-
-        .mobile {
-            display: none;
-        }
-
-        .profiles {
-            &__list {
                 grid-template-columns: 1fr;
-                grid-row-gap: 24px;
             }
         }
+        // +
 
         .quality-windows {
             &__wrapper {
+                margin-top: 50px;
                 display: flex;
                 flex-direction: column-reverse;
                 justify-content: flex-end;
@@ -664,6 +623,42 @@
                 width: 259px;
             }
         }
+        // +
+    }
+
+    .contacts {
+        &__container {
+            // max-width: 600px;
+            flex-direction: column;
+            margin: 0 auto;
+            align-items: center;
+            width: 100%;
+        }
+
+        iframe {
+            height: 250px;
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+
+        &__list {
+            align-items: left;
+        }
+
+        &__office {
+            font-size: 24px;
+        }
+
+        &__phone {
+            font-size: 14px;
+            color: rgb(77, 77, 77);
+        }
+
+        &__adress {
+            font-size: 18px;
+        }
+
     }
 }
 
@@ -680,42 +675,251 @@
         }
     }
 
-    .wrapper {
-        margin: 0 20px !important;
-
-        .configuration {
+    .profiles {
+        
+        &__list {
+            max-width: 624px;
             grid-template-columns: 1fr 1fr;
-
-            max-width: 620px;
             margin: 0 auto;
+        }
 
-            &__container {
-                width: 298px;
+        &__elem {
+            width: 300px; ////
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: row-reverse; ////
+            justify-content: space-around;
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+
+        &__brand-price {
+            display: flex; ////
+            align-items: center; ////
+            justify-content: center;
+
+            margin-bottom: 25px;
+        }
+
+        &__mobile-content {
+            display: flex; ////
+            justify-content: center; ////
+            align-items: center; ////
+        }
+
+        &__price-content {}
+
+        &__subtitle {
+            width: 216px; ////
+        }
+
+        &__text {
+            display: none; ////
+        }
+
+        &__title {
+            font-size: 22px; ////
+            line-height: 24px; ////
+
+            &_margin {
+                margin-right: 12px; ////
             }
         }
 
-        .contacts {
+        &__price-field {
+            padding: 8px 5px 10px 5px; ////
+        }
+
+        &__indicator-list {
+            padding-bottom: 0; ////
+
+            img {
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+        }
+
+        &__indicator-list {
+            display: flex; //// 
+            flex-direction: column; /////
+            justify-content: space-between; ////
+        }
+
+        &__indicator-elem {
+            display: flex;
+            margin-bottom: 12px;
+            justify-content: center; ////
+            width: 100%;
+
+            &::before {
+                content: "\2022";
+                color: $primary-color;
+                font-weight: bold;
+                width: 4px;
+                margin-right: 10px;
+                /* Add content: \2022 is the CSS Code/unicode for a bullet */
+            }
+        }
+
+        &__indicator-img {
+            width: 22px;
+            height: 22px;
+
+            display: none; ////
+        }
+
+        &__subtitle_margin {
+            margin-right: 0px; ////
+            width: 200px; ////
+        }
+
+        &__indicator-img_margin {
+            margin-right: 11px;
+
+            display: none; ////
+        }
+
+        &__indicator-blank {
+            display: none; ////
+        }
+
+        &__indicator-filled {
+            display: none; ////
+        }
+
+        &__button {
+            width: 100%;
+            text-align: center; ////
+            padding-bottom: 32px;
+
+            button {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 24px;
+                color: $primary-color;
+                border: 1px solid $primary-color;
+                border-radius: 32px;
+                background: white;
+                padding: 14px 20px; ////
+
+                &:hover {
+                    color: white;
+                    background: $primary-color;
+                    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+                }
+            }
+
+        }
+    }
+    .slider{
+        max-width: 100%;
+    }
+    .review {
+        margin: 0 auto;
+        width: 628px;
+
+        &__container {
+            width: 300px;
+        }
+
+        &__customer-content {}
+
+        &__customer-text {
+            width: 182px;
+        }
+    }
+
+    .advantages {
+        &__more-list {
+            grid-template-columns: 1fr;
+            justify-content: center;
+        }
+        &__more-elem{
+        }
+        
+        &__wrapper {
+            max-width: 600px !important;
+            margin: 0 auto !important;
+        }
+        
+        &__list {
+            grid-template-columns: 1fr;
+            // width: 600px;
+        }
+
+        &__elem {
+        }
+
+        &__subtitle {
+            max-width: 600px;
+        }
+    }
+
+    .configuration {
+        &__list {
+            grid-template-columns: 1fr 1fr;
+            max-width: 624px;
+            margin: 0 auto;
+        }
+        
+        &__wrapper {
+        }
+
+        &__container {
+            width: 298px;
+        }
+    }
+
+    .contacts {
+        &__wrapper{
+            width: 550px;
+            margin: 0 auto;
+        }
+        &__container {
             flex-direction: column;
-
-            iframe {
-                margin-right: 0;
-                margin-bottom: 100px;
-                width: 550px;
-                height: 550px;
-            }
-
-            &__list {
-                width: 65%;
-                align-items: left;
-
-            }
+            margin: 0 auto;
+            align-items: center;
+            width: 100%;
         }
+
+        iframe {
+            height: 550px;
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+
+        &__list {
+            align-items: left;
+        }
+
+        &__office {
+            font-size: 24px;
+        }
+
+        &__phone {
+            font-size: 14px;
+            color: rgb(77, 77, 77);
+        }
+
+        &__adress {
+            font-size: 18px;
+        }
+
+    }
+
+    .wrapper {
+        // margin: 0 20px !important;
 
         .installment {
             &__subtitles-list {
                 display: flex;
                 flex-direction: column;
             }
+
             &__content {
                 display: flex;
                 flex-direction: column;
@@ -832,17 +1036,6 @@
 
         }
 
-        .advantages {
-            &__more-list {
-                grid-template-columns: repeat(auto-fill, minmax(640px, 60px));
-                justify-content: center;
-            }
-
-            &__elem {
-                max-width: 600px;
-            }
-        }
-
         .quality-windows {
             &__wrapper {
                 display: flex;
@@ -884,250 +1077,82 @@
                 width: 259px;
             }
         }
-
-        .profiles {
-            &__list {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-row-gap: 24px;
-                grid-column-gap: 40px;
-
-                align-items: center;
-                justify-content: center;
-
-                max-width: 640px;
-
-                margin: 0 auto;
-            }
-
-            &__elem {
-                width: 300px; ////
-                background-color: white;
-                border-radius: 12px;
-
-                margin: auto;
-            }
-
-            &__wrapper {
-                width: 100%;
-                margin: 24px;
-                margin: 0 auto;
-            }
-
-            &__content {
-                display: flex;
-                flex-direction: row-reverse; ////
-                justify-content: space-around;
-                padding: 32px 0 0 0 !important;
-
-                margin-bottom: 24px;
-            }
-
-            &__brand-price {
-                display: flex; ////
-                align-items: center; ////
-                justify-content: center;
-
-                margin-bottom: 35px;
-            }
-
-            &__mobile-content {
-                display: flex; ////
-                justify-content: center; ////
-                align-items: center; ////
-            }
-
-            &__price-content {}
-
-            &__subtitle {
-                font-style: normal;
-                font-weight: normal;
-                font-size: 14px;
-                line-height: 19px;
-                color: rgba(0, 0, 0, 0.7);
-
-                width: 216px; ////
-            }
-
-            &__text {
-                max-width: 212px;
-                display: none; ////
-                margin-right: 24px;
-            }
-
-            &__brand-block {
-                display: flex;
-                margin-bottom: 18px;
-            }
-
-            &__brand-img {
-                width: 24px;
-                height: 24px;
-                border-radius: 50%;
-
-                margin: auto 0;
-                margin-right: 12px;
-            }
-
-            &__title {
-                font-style: normal;
-                font-weight: 600;
-                font-size: 22px; ////
-                line-height: 24px; ////
-
-                &_margin {
-                    margin-right: 12px;
-
-                    // display: none; ////
-                }
-            }
-
-            &__price {
-                font-style: normal;
-                font-weight: 600;
-                font-size: 12px;
-                line-height: 15px;
-                color: rgba(0, 0, 0, 0.4);
-
-                padding: 16px 0 8px;
-            }
-
-            &__price-field {
-                font-style: normal;
-                font-weight: bold;
-                font-size: 18px;
-                color: $primary-color;
-                padding: 8px 5px 10px 5px; ////
-                border: 1px solid $primary-color;
-                border-radius: 12px;
-
-                max-width: 155px;
-            }
-
-            &__img {
-                width: 160px;
-                height: 170px;
-            }
-
-            &__indicator-list {
-                padding-bottom: 0; ////
-
-                img {
-                    margin-top: auto;
-                    margin-bottom: auto;
-                }
-            }
-
-            &__indicator-list {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-            }
-
-            &__indicator-elem {
-                display: flex;
-                margin-bottom: 12px;
-                justify-content: center; ////
-                width: 100%;
-
-                &::before {
-                    content: "\2022";
-                    color: $primary-color;
-                    font-weight: bold;
-                    width: 4px;
-                    margin-right: 10px;
-                    /* Add content: \2022 is the CSS Code/unicode for a bullet */
-                }
-            }
-
-            &__indicator-img {
-                width: 22px;
-                height: 22px;
-
-                display: none; ////
-            }
-
-            &__subtitle_margin {
-                margin-right: 0px; ////
-                width: 200px; ////
-            }
-
-            &__indicator-img_margin {
-                margin-right: 11px;
-
-                display: none; ////
-            }
-
-            &__indicator-blank {
-                width: 128px;
-                height: 14px;
-                background: rgba(0, 0, 0, 0.08);
-                border-radius: 7px;
-                margin: auto 0 auto 0;
-
-                display: none; ////
-
-            }
-
-            &__indicator-filled {
-                width: 75%;
-                height: 100%;
-                border-radius: 7px;
-
-                display: none; ////
-
-                &_orange {
-                    background: #F36819;
-                }
-
-                &_green {
-                    background: #4AC120;
-                    width: 30%;
-                }
-
-                &_yellow {
-                    background: #F3B619;
-                    width: 100%;
-                }
-            }
-
-            &__button {
-                width: 100%;
-                text-align: center; ////
-                padding-bottom: 32px;
-
-                button {
-                    font-style: normal;
-                    font-weight: 600;
-                    font-size: 18px;
-                    line-height: 24px;
-                    color: $primary-color;
-                    border: 1px solid $primary-color;
-                    border-radius: 32px;
-                    background: white;
-                    padding: 14px 20px; ////
-
-                    &:hover {
-                        color: white;
-                        background: $primary-color;
-                        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-                    }
-                }
-
-            }
-        }
     }
 }
 
 @media (min-width: 960px) and (max-width: 1199px) {
+    .mobile {
+        display: none;
+    }
+
+    .advantages {
+        &__more-list {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .profiles {
+        &__list {
+            width: 944px;
+            grid-template-columns: 1fr 1fr;
+
+            margin: 0 auto;
+        }
+
+        &__elem {
+            // margin: auto;
+        }
+
+        &__wrapper {
+            margin: 30px;
+        }
+
+        &__content {
+            margin-bottom: 32px;
+        }
+
+        &__price-field {
+            font-size: 24px;
+            padding: 8px 16px 10px 16px;
+        }
+
+        &__indicator-list {
+            padding-bottom: 18px;
+        }
+
+        &__button {
+            text-align: right;
+        }
+    }
+
+    .review {
+        max-width: 944px;
+
+        &__container {
+            width: 460px;
+        }
+
+        &__customer-content {}
+
+        &__customer-text {
+            width: 342px;
+        }
+    }
+
     .wrapper {
         margin: 0 20px !important;
 
         .configuration {
-            grid-template-columns: 1fr 1fr;
+            &__list {
+                width: 940px;
+                grid-template-columns: 1fr 1fr;
+                margin: 0 auto;
+            }
 
             &__container {
                 width: 458px;
+            }
+            &__wrapper{
             }
         }
 
@@ -1148,47 +1173,53 @@
         .quality-windows {
             &__img {
                 width: 345px;
-                margin: 0 auto 20px;
+                margin: 0;
+                // margin: 0 auto 20px;
+            }
+            &__wrapper{
+                justify-content: center;
+            }
+            &__content{
+                margin-right: 0;
             }
         }
-
-        .mobile {
-            display: none;
+        .measurement{
+            &__content{
+                // width: 850px;
+                margin: 0 auto;
+            }
         }
     }
 }
 
 @media (min-width: 1200px) {
-    .wrapper {
-        .configuration {
-            &__list{
-                
-                // justify-content: space-between;
-            }
+    .mobile {
+        display: none;
+    }
+
+    .advantages {
+        &__more-list {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .review {
+        max-width: 1158px;
+
+        &__container {
+            max-width: 370px;
         }
 
+        &__customer-text {
+            max-width: 252px;
+        }
+    }
+
+    .wrapper {
         .advantages {
             &__more-list {
                 justify-content: center;
             }
-
-            &__list {
-                display: flex;
-            }
-
-            &__elem {
-                max-width: 300px;
-            }
         }
-
-        .mobile {
-            display: none;
-        }
-        .profiles{
-            
-            &__list{
-            }
-        }
-
     }
 }

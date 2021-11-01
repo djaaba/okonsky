@@ -8,9 +8,9 @@ mixin rating(stars, date)
   p.review__customer-rate__date= date
 
 //- rewiev slider
-mixin review(customerName, customerPhoto, stars, date, customerText, workPhoto1, workPhoto2, workPhoto3)
+mixin review(customerName, customerPhoto, stars, date, customerText, workPhoto1, workPhoto2, workPhoto3, review)
   .review__container
-    p.review__header Оконский
+    img.review__header(src = "/src/assets/png/yandex.jpg")
     hr.review__line
     .review__main
       img.review__customer-photo(src=customerPhoto)
@@ -18,15 +18,14 @@ mixin review(customerName, customerPhoto, stars, date, customerText, workPhoto1,
         p.review__customer-name=customerName
         .review__customer-rate
           +rating(stars, date)
-        .review__customer-wrapper
-          p.review__customer-text=customerText
-          .review__balcony-photo
-            if(workPhoto1)
-              img(src=workPhoto1)
-            if(workPhoto2)
-              img(src=workPhoto2)
-            if(workPhoto3)
-              img(src=workPhoto3)
+        p.review__customer-text=customerText
+        .review__balcony-photo
+          if(workPhoto1)
+            img(src=workPhoto1)
+          if(workPhoto2)
+            img(src=workPhoto2)
+          if(workPhoto3)
+            img(src=workPhoto3)
 
 //- configuration row
 mixin row(name, price)
@@ -46,7 +45,7 @@ mixin item(src, name)
           if block 
             block
 
-//- profile desk
+//- profile
 mixin profile(flag, brand, text, price, subscrip1, subscrip2, subscrip3)
   li.profiles__elem
     .profiles__wrapper

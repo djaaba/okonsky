@@ -1,36 +1,26 @@
 .profiles {
-    max-width: 960px;
-    margin: 0 auto;
-
+    padding-bottom: 50px;
+    // max-width: 960px;
+    // margin: 0 auto;
     &__list {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        // grid-template-columns: 1fr 1fr;
         grid-row-gap: 24px;
-        grid-column-gap: 40px;
-        align-items: center;
-        justify-content: center;
+        grid-column-gap: 24px;
     }
 
     &__elem {
-        width: 460px;
         background-color: white;
         border-radius: 12px;
 
-        margin: auto;
-    }
-
-    &__wrapper {
-        margin: 32px;
     }
 
     &__content {
         display: flex;
-        margin-bottom: 32px;
     }
 
     &__text {
         max-width: 212px;
-
         margin-right: 24px;
     }
 
@@ -63,7 +53,7 @@
         line-height: 19px;
         color: rgba(0, 0, 0, 0.7);
 
-        width: 240px;
+        // width: 240px;
     }
 
     &__price {
@@ -79,9 +69,7 @@
     &__price-field {
         font-style: normal;
         font-weight: bold;
-        font-size: 24px;
         color: #CB1D1D;
-        padding: 8px 16px 10px 16px;
         border: 1px solid #CB1D1D;
         border-radius: 12px;
 
@@ -94,8 +82,6 @@
     }
 
     &__indicator-list {
-        padding-bottom: 18px;
-
         img {
             margin-top: auto;
             margin-bottom: auto;
@@ -105,7 +91,7 @@
     &__indicator-elem {
         display: flex;
         margin-bottom: 12px;
-        justify-content: space-between;
+        // justify-content: space-between;
 
         &::before {
             content: "\2022";
@@ -163,8 +149,6 @@
 
     &__button {
         width: 100%;
-        text-align: right;
-
         button {
             font-style: normal;
             font-weight: 600;

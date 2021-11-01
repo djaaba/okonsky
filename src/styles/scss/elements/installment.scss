@@ -6,6 +6,9 @@
         color: #FFFFFF;
         padding-top: 80px;
         padding-bottom: 80px;
+
+        display: flex;
+        flex-direction: column;
     }
 
     &__background {
@@ -57,13 +60,12 @@
 
         font-size: 18px;
         font-weight: 400;
-        // line-height: 1.33;
+        line-height: 1.33;
 
         border: 0px;
         height: 60px;
 
-        // height: 56px;
-        // border-radius: 12px;
+        border-radius: 12px;
 
         &::placeholder {
             color: grey;
@@ -77,9 +79,9 @@
     &__button {
         color: white;
 
-        // padding: 15px 48px;
+        height: 100%;
         width: 100%;
-        padding: 15px 0;
+        padding: 15px 48px;
 
         background: $primary-color;
         box-shadow: 0px 2px 9px -1px rgba(203, 29, 29, 0.45);

@@ -1,11 +1,10 @@
 .review{
-    width: 100%;
     margin-bottom: 80px;
+    
+    margin: 0 auto;
     &__container{
         background-color: white;
         border-radius: 12px;
-        width: 100%;
-        // margin-right: 24px;
         &:last-child{
             margin-right: 0;
         }
@@ -24,26 +23,24 @@
         font-weight: bold;
         font-size: 20px;
         line-height: 29px;
+
+        height: 32px;
     }
     &__line{
         @extend %line;
     }
     &__main{
         display: flex;
-
-        padding-top: 22px;
-        padding-left: 22px;
+        justify-content: space-between;
+        padding: 24px;
+        margin: 0 auto;
         img{
             width: 48px;
             height: 48px;
         }
     }
     &__customer-photo{
-
-    }
-    &__customer-content{
-        padding-left: 20px;
-
+        padding-right: 10px;
     }
     &__customer-name{
         font-style: normal;
@@ -51,11 +48,13 @@
         font-size: 18px;
         line-height: 19.8px;
 
-        padding-bottom: 10px;
+        margin-bottom: 10px;
     }
     &__customer-rate{
         display: flex;
-        margin-bottom: 5px;
+        align-items: center;
+
+        margin-bottom: 10px;
         .fa-star{
             color: rgba(254, 203, 47, 1);
             padding-right: 4px;
@@ -65,7 +64,7 @@
             }
         }
         &__stars{
-            margin: 0px 12px 8px 0px;
+            margin-right: 15px;
         }
         &__date{
             color: rgba(0, 0, 0, 0.4);
@@ -76,13 +75,9 @@
         }
     }
     &__customer-text{
-        // max-width: 252px;
         width: 100%;
         color: rgba(0, 0, 0, 0.7);
         margin-bottom: 14px;
-    }
-    &__customer-wrapper{
-        padding-right: 45px;
     }
     &__balcony-photo{
         height: 97px;

@@ -1,13 +1,18 @@
 .contacts {
-    display: flex;
-    align-items: center;
-    margin-bottom: 50px;
-    iframe{
-        margin-right: 35px;
-        width: 760px;
-        height: 600px;
+    padding-bottom: 100px;
+    background-color: white;
+    margin: 0 auto;
+    &__container{
+        // display: flex;
+        // align-items: center;
     }
-    &__list {}
+    iframe{
+        // margin-right: 35px;
+        // width: 700px;
+        // height: 700px;
+    }
+    &__list {
+    }
 
     &__elem {
         &:first-child {

@@ -1,11 +1,13 @@
 .configuration {
     background-color: white;
+    padding-bottom: 50px;
+
     &__container {
-        margin-left: auto;
-        margin-right: auto;
-        height: 555px;
-        width: 370px;
+        // margin: 0 auto;
+        // height: 555px;
+        // width: 370px;
         background-color: #fff;
+        box-shadow: 0px 3px 16px -4px rgba(0, 0, 0, 0.06);
 
         font-style: normal;
         font-weight: 600;
@@ -33,11 +35,10 @@
 
     &__list {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        // grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: 24px;
         grid-row-gap: 32px;
 
-        max-width: 1158px;
 
     }
 

@@ -27,7 +27,8 @@ input{
 
 }
 section {
-    // margin: 0 auto;
+    // padding-bottom: 50px 0; // between sections
+    // padding: 0 10px; // mobile
 }
 
 a:active, /* активная/посещенная ссылка */
@@ -49,6 +50,7 @@ body {
 .wrapper {
     max-width: 1182px;
     margin: 0 auto;
+    // padding: 0 40px;
 }
 
 h1 {
@@ -64,8 +66,8 @@ h2 {
     font-size: 42px;
     line-height: 46px;
 
-    margin-bottom: 48px;
-    margin-top: 40px;
+    padding-bottom: 40px;
+    padding-top: 40px;
 }
 
 h3 {
